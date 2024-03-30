@@ -1,0 +1,152 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 480 400)
+	(text "nios_setup" (rect 209 -1 251 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 384 20 396)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 208 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "clock_bridge_0_in_clk_clk" (rect 0 0 105 12)(font "Arial" (font_size 8)))
+		(text "clock_bridge_0_in_clk_clk" (rect 4 101 154 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 208 112)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "onchip_memory_s2_address[11..0]" (rect 0 0 141 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_address[11..0]" (rect 4 181 190 192)(font "Arial" (font_size 8)))
+		(line (pt 0 192)(pt 208 192)(line_width 3))
+	)
+	(port
+		(pt 0 208)
+		(input)
+		(text "onchip_memory_s2_chipselect" (rect 0 0 125 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_chipselect" (rect 4 197 166 208)(font "Arial" (font_size 8)))
+		(line (pt 0 208)(pt 208 208)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "onchip_memory_s2_clken" (rect 0 0 107 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_clken" (rect 4 213 136 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 208 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "onchip_memory_s2_write" (rect 0 0 105 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_write" (rect 4 229 136 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 208 240)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "onchip_memory_s2_writedata[31..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_writedata[31..0]" (rect 4 261 202 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 208 272)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "onchip_memory_s2_byteenable[3..0]" (rect 0 0 149 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_byteenable[3..0]" (rect 4 277 202 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 208 288)(line_width 3))
+	)
+	(port
+		(pt 0 328)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 317 82 328)(font "Arial" (font_size 8)))
+		(line (pt 0 328)(pt 208 328)(line_width 1))
+	)
+	(port
+		(pt 0 368)
+		(input)
+		(text "switch_external_connection_export[7..0]" (rect 0 0 158 12)(font "Arial" (font_size 8)))
+		(text "switch_external_connection_export[7..0]" (rect 4 357 238 368)(font "Arial" (font_size 8)))
+		(line (pt 0 368)(pt 208 368)(line_width 3))
+	)
+	(port
+		(pt 0 152)
+		(output)
+		(text "led_external_connection_export[7..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export[7..0]" (rect 4 141 220 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 208 152)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(output)
+		(text "onchip_memory_s2_readdata[31..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "onchip_memory_s2_readdata[31..0]" (rect 4 245 196 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 208 256)(line_width 3))
+	)
+	(drawing
+		(text "clk" (rect 193 43 404 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 213 67 444 144)(font "Arial" (color 0 0 0)))
+		(text "clock_bridge_0_in_clk" (rect 79 83 284 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 213 107 444 224)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 69 123 276 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 213 147 462 304)(font "Arial" (color 0 0 0)))
+		(text "onchip_memory_s2" (rect 95 163 286 339)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "address" (rect 213 187 468 384)(font "Arial" (color 0 0 0)))
+		(text "chipselect" (rect 213 203 486 416)(font "Arial" (color 0 0 0)))
+		(text "clken" (rect 213 219 456 448)(font "Arial" (color 0 0 0)))
+		(text "write" (rect 213 235 456 480)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 213 251 474 512)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 213 267 480 544)(font "Arial" (color 0 0 0)))
+		(text "byteenable" (rect 213 283 486 576)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 179 299 388 611)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 213 323 468 656)(font "Arial" (color 0 0 0)))
+		(text "switch_external_connection" (rect 49 339 254 691)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 213 363 462 736)(font "Arial" (color 0 0 0)))
+		(text " nios_setup " (rect 431 384 934 778)(font "Arial" ))
+		(line (pt 208 32)(pt 272 32)(line_width 1))
+		(line (pt 272 32)(pt 272 384)(line_width 1))
+		(line (pt 208 384)(pt 272 384)(line_width 1))
+		(line (pt 208 32)(pt 208 384)(line_width 1))
+		(line (pt 209 52)(pt 209 76)(line_width 1))
+		(line (pt 210 52)(pt 210 76)(line_width 1))
+		(line (pt 209 92)(pt 209 116)(line_width 1))
+		(line (pt 210 92)(pt 210 116)(line_width 1))
+		(line (pt 209 132)(pt 209 156)(line_width 1))
+		(line (pt 210 132)(pt 210 156)(line_width 1))
+		(line (pt 209 172)(pt 209 292)(line_width 1))
+		(line (pt 210 172)(pt 210 292)(line_width 1))
+		(line (pt 209 308)(pt 209 332)(line_width 1))
+		(line (pt 210 308)(pt 210 332)(line_width 1))
+		(line (pt 209 348)(pt 209 372)(line_width 1))
+		(line (pt 210 348)(pt 210 372)(line_width 1))
+		(line (pt 0 0)(pt 480 0)(line_width 1))
+		(line (pt 480 0)(pt 480 400)(line_width 1))
+		(line (pt 0 400)(pt 480 400)(line_width 1))
+		(line (pt 0 0)(pt 0 400)(line_width 1))
+	)
+)

@@ -1,0 +1,23 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_setup.uart -pg 1 -lvl 4 -y 420
+preplace inst nios_setup.onchip_memory -pg 1 -lvl 4 -y 30
+preplace inst nios_setup.nios2e.reset_bridge -pg 1
+preplace inst nios_setup.nios2e.clock_bridge -pg 1
+preplace inst nios_setup.nios2e.cpu -pg 1
+preplace inst nios_setup.clk_0 -pg 1 -lvl 1 -y 50
+preplace inst nios_setup.led -pg 1 -lvl 4 -y 620
+preplace inst nios_setup.switch -pg 1 -lvl 4 -y 520
+preplace inst nios_setup.nios2e -pg 1 -lvl 3 -y 90
+preplace inst nios_setup -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc POINT_TO_POINT<net_container>nios_setup</net_container>(MASTER)nios2e.irq,(SLAVE)uart.irq) 1 3 1 1140
+preplace netloc EXPORT<net_container>nios_setup</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_setup.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_setup</net_container>(SLAVE)nios_setup.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_setup</net_container>(SLAVE)switch.external_connection,(SLAVE)nios_setup.switch_external_connection) 1 0 4 NJ 550 NJ 550 NJ 550 NJ
+preplace netloc FAN_OUT<net_container>nios_setup</net_container>(SLAVE)onchip_memory.clk2,(SLAVE)nios2e.clk,(MASTER)clk_0.clk,(SLAVE)uart.clk,(SLAVE)switch.clk,(SLAVE)onchip_memory.clk1,(SLAVE)led.clk) 1 1 3 NJ 60 560 30 1200
+preplace netloc EXPORT<net_container>nios_setup</net_container>(SLAVE)led.external_connection,(SLAVE)nios_setup.led_external_connection) 1 0 4 NJ 650 NJ 650 NJ 650 NJ
+preplace netloc EXPORT<net_container>nios_setup</net_container>(SLAVE)nios_setup.onchip_memory_s2,(SLAVE)onchip_memory.s2) 1 0 4 NJ 250 NJ 250 NJ 250 NJ
+preplace netloc FAN_OUT<net_container>nios_setup</net_container>(MASTER)clk_0.clk_reset,(SLAVE)uart.reset,(SLAVE)nios2e.reset,(SLAVE)switch.reset,(SLAVE)led.reset,(SLAVE)onchip_memory.reset1,(SLAVE)onchip_memory.reset2) 1 1 3 NJ 80 580 50 1120
+preplace netloc INTERCONNECT<net_container>nios_setup</net_container>(SLAVE)switch.s1,(SLAVE)onchip_memory.s1,(MASTER)nios2e.instruction_master,(SLAVE)nios2e.debug_mem_slave,(SLAVE)uart.avalon_jtag_slave,(MASTER)nios2e.data_master,(SLAVE)led.s1) 1 2 2 600 230 1160
+levelinfo -pg 1 0 170 1540
+levelinfo -hier nios_setup 180 210 540 880 1380 1530

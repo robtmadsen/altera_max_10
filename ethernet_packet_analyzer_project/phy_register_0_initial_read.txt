@@ -1,0 +1,24 @@
+Reg 0 = 0A20 = 0000_1010_0010_0000
+
+also got (when using posedge of clock) 1442 = 0001_0100_0100_0010
+
+15th bit = 0 (normal operation)
+14th bit = 0 (disable loopback)
+13th bit = 0 (speed select)
+12th bit = 0 (disable auto-negotiation process)
+11th bit = 1 (power down)
+10th bit = 0 (normal operation, not tri-stated)
+9th  bit = 1 (Restart auto-negotiation)
+8th  bit = 0 (half-duplex)
+7th  bit = 0 (Disable COL signal test)
+6th  bit = 0 (all other configurations)
+5th  bit = 1 (reserved)
+4th  bit = 0 (reserved)
+3rd  bit = 0 (reserved)
+2nd  bit = 0 (reserved)
+1st  bit = 0 (reserved)
+0th  bit = 0 (reserved)
+
+Reg 2 should be (p.136) OUI[3:18] = 0000_0001_0100_0001 = 'h0141
+
+In reverse this would look like: 1000_0010_1000_0000 = 'h8280
