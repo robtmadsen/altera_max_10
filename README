@@ -1,1 +1,3 @@
 Emulate a high performance MAC on an ALTERA MAX 10 FPGA
+
+Using a Nios II/e Core, Marvell 88E1111 PHY

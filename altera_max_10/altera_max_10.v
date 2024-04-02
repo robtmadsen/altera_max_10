@@ -377,29 +377,28 @@ module  altera_max_10(
 		end
 	end
 
-	reg [3:0] enet_mdio_bit_count;
-	reg [4:0] enet_mdio_read_count;
+    reg [3:0] enet_mdio_bit_count;
+    reg [4:0] enet_mdio_read_count;
     reg       enet_mdc_clk;
-	reg	      enet_mdio;
-	reg       write_enet_mdio;
-	reg [3:0] div_by_4_count;
-	initial begin
-		div_by_4_count = 0;
-		enet_mdio = 0;
-		enet_mdio_bit_count = 0;
-		enet_mdio_read_count = 0;
-	    bits_read_from_phy = 0;
-		phy_registers_read = 0;
-	end
-	// clock divider: 25MHz down to 2.5MHz 
+    reg	      enet_mdio;
+    reg       write_enet_mdio;
+    reg [3:0] div_by_4_count;
+    initial begin
+        div_by_4_count = 0;
+        enet_mdio = 0;
+        enet_mdio_bit_count = 0;
+        enet_mdio_read_count = 0;
+        bits_read_from_phy = 0;
+        phy_registers_read = 0;
+    end
+    // clock divider: 25MHz down to 2.5MHz 
     always @ (posedge CLK_25_MAX10) begin
-		if (div_by_4_count == 'd4) begin
-			enet_mdc_clk <= ~enet_mdc_clk;
-			div_by_4_count <= 0;
-		end
-		else begin
-			div_by_4_count <= div_by_4_count + 1;
-		end
+        if (div_by_4_count == 'd4) begin
+            enet_mdc_clk <= ~enet_mdc_clk;
+            div_by_4_count <= 0;
+        end else begin
+            div_by_4_count <= div_by_4_count + 1;
+        end
     end
 
 

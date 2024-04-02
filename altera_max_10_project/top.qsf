@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-# Date created = 07:48:49  April 02, 2024
+# Date created = 08:00:57  April 02, 2024
 #
 # -------------------------------------------------------------------------- #
 #
@@ -774,6 +774,6 @@ set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_example_i|if0|p0|umemph
 set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_example_i|if0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[0] -tag __ddr3_example_if0_p0
 set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_example_i|if0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[1] -tag __ddr3_example_if0_p0
 set_instance_assignment -name GLOBAL_SIGNAL OFF -to ddr3_example_i|if0|p0|umemphy|uread_datapath|reset_n_fifo_wraddress[2] -tag __ddr3_example_if0_p0
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name QIP_FILE ../altera_max_10/nios_setup/synthesis/nios_setup.qip
 set_global_assignment -name VERILOG_FILE ../altera_max_10/altera_max_10.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
