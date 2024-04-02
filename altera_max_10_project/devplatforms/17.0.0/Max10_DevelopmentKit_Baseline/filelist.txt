@@ -1,0 +1,2 @@
+Max10_DevelopmentKit_Baseline.qp_info
+Max10_DevelopmentKit_Baseline.qar
