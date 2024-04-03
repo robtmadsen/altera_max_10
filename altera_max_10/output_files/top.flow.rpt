@@ -1,5 +1,5 @@
 Flow report for top
-Fri Mar 29 19:15:51 2024
+Wed Apr  3 17:53:46 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 29 19:15:51 2024          ;
+; Flow Status                        ; Successful - Wed Apr  3 17:53:46 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; top                                            ;
-; Top-level Entity Name              ; ethernet_packet_analyzer                       ;
+; Top-level Entity Name              ; altera_max_10                                  ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C6GES                               ;
 ; Timing Models                      ; Preliminary                                    ;
-; Total logic elements               ; 2,591 / 49,760 ( 5 % )                         ;
+; Total logic elements               ; 2,592 / 49,760 ( 5 % )                         ;
 ;     Total combinational functions  ; 2,229 / 49,760 ( 4 % )                         ;
 ;     Dedicated logic registers      ; 1,637 / 49,760 ( 3 % )                         ;
 ; Total registers                    ; 1637                                           ;
-; Total pins                         ; 228 / 360 ( 63 % )                             ;
+; Total pins                         ; 57 / 360 ( 16 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 142,336 / 1,677,312 ( 8 % )                    ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -67,38 +67,38 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/29/2024 19:14:50 ;
+; Start date & time ; 04/03/2024 17:52:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                               ;
-+-------------------------------------+--------------------------------------------------------------+---------------+--------------------------+----------------+
-; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name              ; Section Id     ;
-+-------------------------------------+--------------------------------------------------------------+---------------+--------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 268446087814444.171176129007200                              ; --            ; --                       ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                  ; --            ; --                       ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (Verilog)                                  ; <None>        ; --                       ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                                         ; --            ; --                       ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --                       ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --                       ; --             ;
-; MISC_FILE                           ; nios_setup/synthesis/../nios_setup.cmp                       ; --            ; --                       ; --             ;
-; MISC_FILE                           ; nios_setup/synthesis/../../nios_setup.qsys                   ; --            ; --                       ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; ethernet_packet_analyzer ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; ethernet_packet_analyzer ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; ethernet_packet_analyzer ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --                       ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --                       ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --                       ; --             ;
-; SLD_FILE                            ; nios_setup/synthesis/nios_setup.regmap                       ; --            ; --                       ; --             ;
-; SLD_FILE                            ; nios_setup/synthesis/nios_setup.debuginfo                    ; --            ; --                       ; --             ;
-; SLD_INFO                            ; QSYS_NAME nios_setup HAS_SOPCINFO 1 GENERATION_ID 1710100944 ; --            ; nios_setup               ; --             ;
-; SOPCINFO_FILE                       ; nios_setup/synthesis/../../nios_setup.sopcinfo               ; --            ; --                       ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --                       ; --             ;
-; TOP_LEVEL_ENTITY                    ; ethernet_packet_analyzer                                     ; top           ; --                       ; --             ;
-+-------------------------------------+--------------------------------------------------------------+---------------+--------------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                    ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+----------------+
+; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name   ; Section Id     ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 268446087814444.171218836818980                              ; --            ; --            ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                  ; --            ; --            ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; Questa Intel FPGA (Verilog)                                  ; <None>        ; --            ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                         ; --            ; --            ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --            ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --            ; --             ;
+; MISC_FILE                           ; nios_setup/synthesis/../nios_setup.cmp                       ; --            ; --            ; --             ;
+; MISC_FILE                           ; nios_setup/synthesis/../../nios_setup.qsys                   ; --            ; --            ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; altera_max_10 ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; altera_max_10 ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; altera_max_10 ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --            ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --            ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --            ; --             ;
+; SLD_FILE                            ; nios_setup/synthesis/nios_setup.regmap                       ; --            ; --            ; --             ;
+; SLD_FILE                            ; nios_setup/synthesis/nios_setup.debuginfo                    ; --            ; --            ; --             ;
+; SLD_INFO                            ; QSYS_NAME nios_setup HAS_SOPCINFO 1 GENERATION_ID 1710100944 ; --            ; nios_setup    ; --             ;
+; SOPCINFO_FILE                       ; nios_setup/synthesis/../../nios_setup.sopcinfo               ; --            ; --            ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --            ; --             ;
+; TOP_LEVEL_ENTITY                    ; altera_max_10                                                ; top           ; --            ; --             ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -106,12 +106,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4897 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:17     ; 1.2                     ; 5693 MB             ; 00:00:18                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4750 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.5                     ; 4876 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4680 MB             ; 00:00:01                           ;
-; Total                ; 00:00:55     ; --                      ; --                  ; 00:00:50                           ;
+; Analysis & Synthesis ; 00:00:30     ; 1.0                     ; 4880 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:13     ; 1.3                     ; 5670 MB             ; 00:00:14                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4751 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.7                     ; 4859 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
+; Total                ; 00:00:52     ; --                      ; --                  ; 00:00:45                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

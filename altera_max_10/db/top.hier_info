@@ -1,4 +1,4 @@
-|ethernet_packet_analyzer
+|altera_max_10
 CLK_50_MAX10 => CLK_50_MAX10.IN1
 CLK_25_MAX10 => div_by_4_count[0].CLK
 CLK_25_MAX10 => div_by_4_count[1].CLK
@@ -17,36 +17,6 @@ USER_PB[0] => ~NO_FANOUT~
 USER_PB[1] => ~NO_FANOUT~
 USER_PB[2] => ~NO_FANOUT~
 USER_PB[3] => ~NO_FANOUT~
-USER_DIPSW[0] => ~NO_FANOUT~
-USER_DIPSW[1] => ~NO_FANOUT~
-USER_DIPSW[2] => ~NO_FANOUT~
-USER_DIPSW[3] => ~NO_FANOUT~
-USER_DIPSW[4] => ~NO_FANOUT~
-USB_RESETn => ~NO_FANOUT~
-USB_WRn => ~NO_FANOUT~
-USB_RDn => ~NO_FANOUT~
-USB_OEn => ~NO_FANOUT~
-USB_ADDR[0] <> <UNC>
-USB_ADDR[1] <> <UNC>
-USB_DATA[0] <> <UNC>
-USB_DATA[1] <> <UNC>
-USB_DATA[2] <> <UNC>
-USB_DATA[3] <> <UNC>
-USB_DATA[4] <> <UNC>
-USB_DATA[5] <> <UNC>
-USB_DATA[6] <> <UNC>
-USB_DATA[7] <> <UNC>
-USB_FULL <= <GND>
-USB_EMPTY <= <GND>
-USB_SCL => ~NO_FANOUT~
-USB_SDA <> <UNC>
-USB_CLK => ~NO_FANOUT~
-QSPI_CSn <= <GND>
-QSPI_CLK <= <GND>
-QSPI_IO[0] <= <GND>
-QSPI_IO[1] <= <GND>
-QSPI_IO[2] <= <GND>
-QSPI_IO[3] <= <GND>
 ENETA_GTX_CLK <= CLK_LVDS_125_p.DB_MAX_OUTPUT_PORT_TYPE
 ENETA_TX_CLK => ~NO_FANOUT~
 ENETA_TX_D[0] <= <VCC>
@@ -89,126 +59,9 @@ ENETB_RX_CRS => ~NO_FANOUT~
 ENETB_RX_COL => ~NO_FANOUT~
 ENETB_LED_LINK100 <= <GND>
 ENETB_INTn => ~NO_FANOUT~
-UART_TX <= <GND>
-UART_RX => ~NO_FANOUT~
-HSMC_CLK_IN_p[1] => ~NO_FANOUT~
-HSMC_CLK_IN_p[2] => ~NO_FANOUT~
-HSMC_CLK_IN0 => ~NO_FANOUT~
-HSMC_CLK_OUT_p[1] <= <GND>
-HSMC_CLK_OUT_p[2] <= <GND>
-HSMC_CLK_OUT0 <= <GND>
-HSMC_RX_D_p[0] => ~NO_FANOUT~
-HSMC_RX_D_p[1] => ~NO_FANOUT~
-HSMC_RX_D_p[2] => ~NO_FANOUT~
-HSMC_RX_D_p[3] => ~NO_FANOUT~
-HSMC_RX_D_p[4] => ~NO_FANOUT~
-HSMC_RX_D_p[5] => ~NO_FANOUT~
-HSMC_RX_D_p[6] => ~NO_FANOUT~
-HSMC_RX_D_p[7] => ~NO_FANOUT~
-HSMC_RX_D_p[8] => ~NO_FANOUT~
-HSMC_RX_D_p[9] => ~NO_FANOUT~
-HSMC_RX_D_p[10] => ~NO_FANOUT~
-HSMC_RX_D_p[11] => ~NO_FANOUT~
-HSMC_RX_D_p[12] => ~NO_FANOUT~
-HSMC_RX_D_p[13] => ~NO_FANOUT~
-HSMC_RX_D_p[14] => ~NO_FANOUT~
-HSMC_RX_D_p[15] => ~NO_FANOUT~
-HSMC_RX_D_p[16] => ~NO_FANOUT~
-HSMC_TX_D_p[0] <= <GND>
-HSMC_TX_D_p[1] <= <GND>
-HSMC_TX_D_p[2] <= <GND>
-HSMC_TX_D_p[3] <= <GND>
-HSMC_TX_D_p[4] <= <GND>
-HSMC_TX_D_p[5] <= <GND>
-HSMC_TX_D_p[6] <= <GND>
-HSMC_TX_D_p[7] <= <GND>
-HSMC_TX_D_p[8] <= <GND>
-HSMC_TX_D_p[9] <= <GND>
-HSMC_TX_D_p[10] <= <GND>
-HSMC_TX_D_p[11] <= <GND>
-HSMC_TX_D_p[12] <= <GND>
-HSMC_TX_D_p[13] <= <GND>
-HSMC_TX_D_p[14] <= <GND>
-HSMC_TX_D_p[15] <= <GND>
-HSMC_TX_D_p[16] <= <GND>
-HSMC_D[0] <> <UNC>
-HSMC_D[1] <> <UNC>
-HSMC_D[2] <> <UNC>
-HSMC_D[3] <> <UNC>
-HSMC_SDA <> <UNC>
-HSMC_SCL <= <GND>
-HSMC_PRSNTn => ~NO_FANOUT~
-HDMI_TX_D[0] <= <GND>
-HDMI_TX_D[1] <= <GND>
-HDMI_TX_D[2] <= <GND>
-HDMI_TX_D[3] <= <GND>
-HDMI_TX_D[4] <= <GND>
-HDMI_TX_D[5] <= <GND>
-HDMI_TX_D[6] <= <GND>
-HDMI_TX_D[7] <= <GND>
-HDMI_TX_D[8] <= <GND>
-HDMI_TX_D[9] <= <GND>
-HDMI_TX_D[10] <= <GND>
-HDMI_TX_D[11] <= <GND>
-HDMI_TX_D[12] <= <GND>
-HDMI_TX_D[13] <= <GND>
-HDMI_TX_D[14] <= <GND>
-HDMI_TX_D[15] <= <GND>
-HDMI_TX_D[16] <= <GND>
-HDMI_TX_D[17] <= <GND>
-HDMI_TX_D[18] <= <GND>
-HDMI_TX_D[19] <= <GND>
-HDMI_TX_D[20] <= <GND>
-HDMI_TX_D[21] <= <GND>
-HDMI_TX_D[22] <= <GND>
-HDMI_TX_D[23] <= <GND>
-HDMI_TX_CLK <= <GND>
-HDMI_TX_DE <= <GND>
-HDMI_TX_HS <= <GND>
-HDMI_TX_VS <= <GND>
-HDMI_TX_INT => ~NO_FANOUT~
-HDMI_SCL <> <UNC>
-HDMI_SDA <> <UNC>
-PMODA_IO[0] <> <UNC>
-PMODA_IO[1] <> <UNC>
-PMODA_IO[2] <> <UNC>
-PMODA_IO[3] <> <UNC>
-PMODA_IO[4] <> <UNC>
-PMODA_IO[5] <> <UNC>
-PMODA_IO[6] <> <UNC>
-PMODA_IO[7] <> <UNC>
-PMODB_IO[0] <> <UNC>
-PMODB_IO[1] <> <UNC>
-PMODB_IO[2] <> <UNC>
-PMODB_IO[3] <> <UNC>
-PMODB_IO[4] <> <UNC>
-PMODB_IO[5] <> <UNC>
-PMODB_IO[6] <> <UNC>
-PMODB_IO[7] <> <UNC>
-DAC_SYNC <= <GND>
-DAC_SCLK <= <GND>
-DAC_DIN <= <GND>
-ADC1IN[1] => ~NO_FANOUT~
-ADC1IN[2] => ~NO_FANOUT~
-ADC1IN[3] => ~NO_FANOUT~
-ADC1IN[4] => ~NO_FANOUT~
-ADC1IN[5] => ~NO_FANOUT~
-ADC1IN[6] => ~NO_FANOUT~
-ADC1IN[7] => ~NO_FANOUT~
-ADC1IN[8] => ~NO_FANOUT~
-ADC2IN[1] => ~NO_FANOUT~
-ADC2IN[2] => ~NO_FANOUT~
-ADC2IN[3] => ~NO_FANOUT~
-ADC2IN[4] => ~NO_FANOUT~
-ADC2IN[5] => ~NO_FANOUT~
-ADC2IN[6] => ~NO_FANOUT~
-ADC2IN[7] => ~NO_FANOUT~
-ADC2IN[8] => ~NO_FANOUT~
-IP_SECURITY <> <UNC>
-JTAG_SAFE <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios
+|altera_max_10|nios_setup:nios
 clk_clk => clk_clk.IN8
 clock_bridge_0_in_clk_clk => clock_bridge_0_in_clk_clk.IN2
 led_external_connection_export[0] <= nios_setup_led:led.out_port
@@ -314,7 +167,7 @@ switch_external_connection_export[6] => switch_external_connection_export[6].IN1
 switch_external_connection_export[7] => switch_external_connection_export[7].IN1
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_led:led
+|altera_max_10|nios_setup:nios|nios_setup_led:led
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 chipselect => always0.IN0
@@ -409,7 +262,7 @@ readdata[30] <= <GND>
 readdata[31] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e
 clk => clk.IN1
 reset_n => reset_n.IN1
 reset_req => reset_req.IN1
@@ -668,7 +521,7 @@ debug_mem_slave_writedata[31] => debug_mem_slave_writedata[31].IN1
 dummy_ci_port <= nios_setup_nios2e_cpu:cpu.dummy_ci_port
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu
 clk => clk.IN4
 d_readdata[0] => av_ld_byte0_data_nxt.DATAA
 d_readdata[1] => av_ld_byte0_data_nxt.DATAA
@@ -927,7 +780,7 @@ i_address[15] <= i_address[15].DB_MAX_OUTPUT_PORT_TYPE
 i_read <= i_read.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_test_bench:the_nios_setup_nios2e_cpu_test_bench
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_test_bench:the_nios_setup_nios2e_cpu_test_bench
 D_iw[0] => ~NO_FANOUT~
 D_iw[1] => ~NO_FANOUT~
 D_iw[2] => ~NO_FANOUT~
@@ -1245,7 +1098,7 @@ av_ld_data_aligned_filtered[31] <= av_ld_data_aligned_unfiltered[31].DB_MAX_OUTP
 test_has_ended <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a
 clock => clock.IN1
 data[0] => ram_data[0].IN1
 data[1] => ram_data[1].IN1
@@ -1324,7 +1177,7 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a|altsyncram:the_altsyncram
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a|altsyncram:the_altsyncram
 wren_a => altsyncram_s0c1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1484,7 +1337,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a|altsyncram:the_altsyncram|altsyncram_s0c1:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_a_module:nios_setup_nios2e_cpu_register_bank_a|altsyncram:the_altsyncram|altsyncram_s0c1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -1935,7 +1788,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b
 clock => clock.IN1
 data[0] => ram_data[0].IN1
 data[1] => ram_data[1].IN1
@@ -2014,7 +1867,7 @@ q[30] <= altsyncram:the_altsyncram.q_b
 q[31] <= altsyncram:the_altsyncram.q_b
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b|altsyncram:the_altsyncram
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b|altsyncram:the_altsyncram
 wren_a => altsyncram_s0c1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -2174,7 +2027,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b|altsyncram:the_altsyncram|altsyncram_s0c1:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_register_bank_b_module:nios_setup_nios2e_cpu_register_bank_b|altsyncram:the_altsyncram|altsyncram_s0c1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -2625,7 +2478,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci
 D_valid => D_valid.IN1
 E_st_data[0] => E_st_data[0].IN1
 E_st_data[1] => E_st_data[1].IN1
@@ -2849,7 +2702,7 @@ resetrequest <= nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_
 waitrequest <= nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem.waitrequest
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug
 clk => clk.IN2
 dbrk_break => oci_hbreak_req.IN1
 debugreq => always0.IN0
@@ -2917,7 +2770,7 @@ resetlatch <= resetlatch~reg0.DB_MAX_OUTPUT_PORT_TYPE
 resetrequest <= resetrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -2926,7 +2779,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer1
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_debug:the_nios_setup_nios2e_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer1
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -2935,7 +2788,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_break:the_nios_setup_nios2e_cpu_nios2_oci_break
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_break:the_nios_setup_nios2e_cpu_nios2_oci_break
 clk => trigger_state.CLK
 clk => break_readreg[0]~reg0.CLK
 clk => break_readreg[1]~reg0.CLK
@@ -3283,7 +3136,7 @@ xbrk_ctrl3[6] <= <GND>
 xbrk_ctrl3[7] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_xbrk:the_nios_setup_nios2e_cpu_nios2_oci_xbrk
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_xbrk:the_nios_setup_nios2e_cpu_nios2_oci_xbrk
 D_valid => ~NO_FANOUT~
 E_valid => xbrk_break~reg0.ENA
 F_pc[0] => ~NO_FANOUT~
@@ -3344,7 +3197,7 @@ xbrk_traceon <= <GND>
 xbrk_trigout <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dbrk:the_nios_setup_nios2e_cpu_nios2_oci_dbrk
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dbrk:the_nios_setup_nios2e_cpu_nios2_oci_dbrk
 E_st_data[0] => cpu_d_writedata[0].DATAIN
 E_st_data[1] => cpu_d_writedata[1].DATAIN
 E_st_data[2] => cpu_d_writedata[2].DATAIN
@@ -3537,7 +3390,7 @@ dbrk_traceon <= dbrk_traceon~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dbrk_trigout <= dbrk_trigout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_itrace:the_nios_setup_nios2e_cpu_nios2_oci_itrace
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_itrace:the_nios_setup_nios2e_cpu_nios2_oci_itrace
 clk => trc_on~reg0.CLK
 dbrk_traceoff => ~NO_FANOUT~
 dbrk_traceon => ~NO_FANOUT~
@@ -3617,7 +3470,7 @@ trc_ctrl[15] <= <GND>
 trc_on <= trc_on~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dtrace:the_nios_setup_nios2e_cpu_nios2_oci_dtrace
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dtrace:the_nios_setup_nios2e_cpu_nios2_oci_dtrace
 clk => dtm[0]~reg0.CLK
 clk => dtm[1]~reg0.CLK
 clk => dtm[2]~reg0.CLK
@@ -3935,7 +3788,7 @@ dtm[34] <= dtm[34]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 dtm[35] <= dtm[35]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dtrace:the_nios_setup_nios2e_cpu_nios2_oci_dtrace|nios_setup_nios2e_cpu_nios2_oci_td_mode:nios_setup_nios2e_cpu_nios2_oci_trc_ctrl_td_mode
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_dtrace:the_nios_setup_nios2e_cpu_nios2_oci_dtrace|nios_setup_nios2e_cpu_nios2_oci_td_mode:nios_setup_nios2e_cpu_nios2_oci_trc_ctrl_td_mode
 ctrl[0] => ~NO_FANOUT~
 ctrl[1] => ~NO_FANOUT~
 ctrl[2] => ~NO_FANOUT~
@@ -3955,7 +3808,7 @@ td_mode[2] <= ctrl[6].DB_MAX_OUTPUT_PORT_TYPE
 td_mode[3] <= ctrl[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo
 atm[0] => ~NO_FANOUT~
 atm[1] => ~NO_FANOUT~
 atm[2] => ~NO_FANOUT~
@@ -4121,7 +3974,7 @@ tw[34] <= itm[34].DB_MAX_OUTPUT_PORT_TYPE
 tw[35] <= itm[35].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_compute_input_tm_cnt:the_nios_setup_nios2e_cpu_nios2_oci_compute_input_tm_cnt
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_compute_input_tm_cnt:the_nios_setup_nios2e_cpu_nios2_oci_compute_input_tm_cnt
 atm_valid => Decoder0.IN1
 dtm_valid => Decoder0.IN2
 itm_valid => Decoder0.IN0
@@ -4129,7 +3982,7 @@ compute_input_tm_cnt[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 compute_input_tm_cnt[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_fifo_wrptr_inc:the_nios_setup_nios2e_cpu_nios2_oci_fifo_wrptr_inc
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_fifo_wrptr_inc:the_nios_setup_nios2e_cpu_nios2_oci_fifo_wrptr_inc
 ge2_free => always0.IN1
 ge3_free => always0.IN1
 input_tm_cnt[0] => LessThan0.IN4
@@ -4144,7 +3997,7 @@ fifo_wrptr_inc[2] <= <GND>
 fifo_wrptr_inc[3] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_fifo_cnt_inc:the_nios_setup_nios2e_cpu_nios2_oci_fifo_cnt_inc
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_fifo:the_nios_setup_nios2e_cpu_nios2_oci_fifo|nios_setup_nios2e_cpu_nios2_oci_fifo_cnt_inc:the_nios_setup_nios2e_cpu_nios2_oci_fifo_cnt_inc
 empty => fifo_cnt_inc.OUTPUTSELECT
 empty => fifo_cnt_inc.OUTPUTSELECT
 empty => fifo_cnt_inc.OUTPUTSELECT
@@ -4167,7 +4020,7 @@ fifo_cnt_inc[3] <= fifo_cnt_inc.DB_MAX_OUTPUT_PORT_TYPE
 fifo_cnt_inc[4] <= fifo_cnt_inc.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_pib:the_nios_setup_nios2e_cpu_nios2_oci_pib
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_pib:the_nios_setup_nios2e_cpu_nios2_oci_pib
 tr_data[0] <= <GND>
 tr_data[1] <= <GND>
 tr_data[2] <= <GND>
@@ -4206,7 +4059,7 @@ tr_data[34] <= <GND>
 tr_data[35] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_im:the_nios_setup_nios2e_cpu_nios2_oci_im
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_oci_im:the_nios_setup_nios2e_cpu_nios2_oci_im
 clk => trc_wrap~reg0.CLK
 clk => trc_im_addr[0]~reg0.CLK
 clk => trc_im_addr[1]~reg0.CLK
@@ -4324,7 +4177,7 @@ trc_wrap <= trc_wrap~reg0.DB_MAX_OUTPUT_PORT_TYPE
 xbrk_wrap_traceoff <= xbrk_wrap_traceoff.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_avalon_reg:the_nios_setup_nios2e_cpu_nios2_avalon_reg
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_avalon_reg:the_nios_setup_nios2e_cpu_nios2_avalon_reg
 address[0] => Equal0.IN8
 address[0] => Equal1.IN1
 address[1] => Equal0.IN7
@@ -4517,7 +4370,7 @@ ocireg_mrs <= writedata[0].DB_MAX_OUTPUT_PORT_TYPE
 take_action_ocireg <= take_action_ocireg.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem
 address[0] => ociram_addr.DATAA
 address[1] => ociram_addr.DATAA
 address[2] => ociram_addr.DATAA
@@ -4871,7 +4724,7 @@ ociram_readdata[31] <= nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nio
 waitrequest <= waitrequest~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -4953,7 +4806,7 @@ q[30] <= altsyncram:the_altsyncram.q_a
 q[31] <= altsyncram:the_altsyncram.q_a
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram|altsyncram:the_altsyncram
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram|altsyncram:the_altsyncram
 wren_a => altsyncram_0n61:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -5053,7 +4906,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_0n61:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_nios2_ocimem:the_nios_setup_nios2e_cpu_nios2_ocimem|nios_setup_nios2e_cpu_ociram_sp_ram_module:nios_setup_nios2e_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_0n61:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -5505,7 +5358,7 @@ wren_a => ram_block1a30.PORTAWE
 wren_a => ram_block1a31.PORTAWE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper
 MonDReg[0] => MonDReg[0].IN1
 MonDReg[1] => MonDReg[1].IN1
 MonDReg[2] => MonDReg[2].IN1
@@ -5681,7 +5534,7 @@ take_no_action_break_c <= nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setu
 take_no_action_ocimem_a <= nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk.take_no_action_ocimem_a
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck
 MonDReg[0] => Mux36.IN0
 MonDReg[1] => Mux35.IN0
 MonDReg[2] => Mux34.IN0
@@ -6018,7 +5871,7 @@ vs_e1dr_d1 <= vs_e1dr_d1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 vs_uir_d1 <= vs_uir_d1~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck|altera_std_synchronizer:the_altera_std_synchronizer2
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck|altera_std_synchronizer:the_altera_std_synchronizer2
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6027,7 +5880,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck|altera_std_synchronizer:the_altera_std_synchronizer3
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_tck:the_nios_setup_nios2e_cpu_debug_slave_tck|altera_std_synchronizer:the_altera_std_synchronizer3
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6036,7 +5889,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk
 clk => clk.IN2
 ir_in[0] => ir[0].DATAIN
 ir_in[1] => ir[1].DATAIN
@@ -6130,7 +5983,7 @@ take_no_action_break_c <= take_no_action_break_c.DB_MAX_OUTPUT_PORT_TYPE
 take_no_action_ocimem_a <= take_no_action_ocimem_a.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk|altera_std_synchronizer:the_altera_std_synchronizer4
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6139,7 +5992,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk|altera_std_synchronizer:the_altera_std_synchronizer5
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|nios_setup_nios2e_cpu_debug_slave_sysclk:the_nios_setup_nios2e_cpu_debug_slave_sysclk|altera_std_synchronizer:the_altera_std_synchronizer5
 clk => dreg[0].CLK
 clk => din_s1.CLK
 reset_n => dreg[0].ACLR
@@ -6148,7 +6001,7 @@ din => din_s1.DATAIN
 dout <= dout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy
 tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
 tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
 ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
@@ -6183,7 +6036,7 @@ jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_sta
 jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
 usr_tck <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
 usr_tdi <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tdi
 usr_ir_in[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_ir_in
@@ -6245,7 +6098,7 @@ ir_out[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
 ir_out[1] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -6304,7 +6157,7 @@ adapted_ir_out[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_im
 adapted_ir_out[1] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[1]
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|altera_max_10|nios_setup:nios|nios_setup_nios2e:nios2e|nios_setup_nios2e_cpu:cpu|nios_setup_nios2e_cpu_nios2_oci:the_nios_setup_nios2e_cpu_nios2_oci|nios_setup_nios2e_cpu_debug_slave_wrapper:the_nios_setup_nios2e_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:nios_setup_nios2e_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -6363,7 +6216,7 @@ adapted_ir_out[0] => ir_out[0].DATAIN
 adapted_ir_out[1] => ir_out[1].DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_onchip_memory:onchip_memory
+|altera_max_10|nios_setup:nios|nios_setup_onchip_memory:onchip_memory
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -6539,7 +6392,7 @@ readdata2[30] <= altsyncram:the_altsyncram.q_b
 readdata2[31] <= altsyncram:the_altsyncram.q_b
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_onchip_memory:onchip_memory|altsyncram:the_altsyncram
+|altera_max_10|nios_setup:nios|nios_setup_onchip_memory:onchip_memory|altsyncram:the_altsyncram
 wren_a => altsyncram_vvu1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => altsyncram_vvu1:auto_generated.wren_b
@@ -6719,7 +6572,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_onchip_memory:onchip_memory|altsyncram:the_altsyncram|altsyncram_vvu1:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_onchip_memory:onchip_memory|altsyncram:the_altsyncram|altsyncram_vvu1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -7874,7 +7727,7 @@ wren_b => ram_block1a30.PORTBWE
 wren_b => ram_block1a31.PORTBWE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_switch:switch
+|altera_max_10|nios_setup:nios|nios_setup_switch:switch
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -7983,7 +7836,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart
 av_address => ien_AF.OUTPUTSELECT
 av_address => ien_AE.OUTPUTSELECT
 av_address => ac.OUTPUTSELECT
@@ -8073,7 +7926,7 @@ dataavailable <= dataavailable~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readyfordata <= readyfordata~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_wdata[0] => fifo_wdata[0].IN1
@@ -8104,7 +7957,7 @@ wfifo_used[4] <= scfifo:wfifo.usedw
 wfifo_used[5] <= scfifo:wfifo.usedw
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo
 data[0] => scfifo_9621:auto_generated.data[0]
 data[1] => scfifo_9621:auto_generated.data[1]
 data[2] => scfifo_9621:auto_generated.data[2]
@@ -8140,7 +7993,7 @@ usedw[4] <= scfifo_9621:auto_generated.usedw[4]
 usedw[5] <= scfifo_9621:auto_generated.usedw[5]
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated
 aclr => a_dpfifo_bb01:dpfifo.aclr
 clock => a_dpfifo_bb01:dpfifo.clock
 data[0] => a_dpfifo_bb01:dpfifo.data[0]
@@ -8171,7 +8024,7 @@ usedw[5] <= a_dpfifo_bb01:dpfifo.usedw[5]
 wrreq => a_dpfifo_bb01:dpfifo.wreq
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_n2b:rd_ptr_count.aclr
 aclr => cntr_n2b:wr_ptr.aclr
@@ -8217,7 +8070,7 @@ wreq => altsyncram_dtn1:FIFOram.wren_a
 wreq => cntr_n2b:wr_ptr.cnt_en
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_337:count_usedw.aclr
@@ -8249,7 +8102,7 @@ wreq => _.IN0
 wreq => cntr_337:count_usedw.updown
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state|cntr_337:count_usedw
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state|cntr_337:count_usedw
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8275,7 +8128,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|altsyncram_dtn1:FIFOram
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|altsyncram_dtn1:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -8430,7 +8283,7 @@ wren_a => ram_block1a7.PORTAWE
 wren_a => ram_block1a7.ENA0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:rd_ptr_count
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:rd_ptr_count
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8450,7 +8303,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:wr_ptr
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_w:the_nios_setup_uart_scfifo_w|scfifo:wfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:wr_ptr
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8470,7 +8323,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r
 clk => clk.IN1
 fifo_clear => fifo_clear.IN1
 fifo_rd => fifo_rd.IN1
@@ -8502,7 +8355,7 @@ rfifo_used[4] <= scfifo:rfifo.usedw
 rfifo_used[5] <= scfifo:rfifo.usedw
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo
 data[0] => scfifo_9621:auto_generated.data[0]
 data[1] => scfifo_9621:auto_generated.data[1]
 data[2] => scfifo_9621:auto_generated.data[2]
@@ -8538,7 +8391,7 @@ usedw[4] <= scfifo_9621:auto_generated.usedw[4]
 usedw[5] <= scfifo_9621:auto_generated.usedw[5]
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated
 aclr => a_dpfifo_bb01:dpfifo.aclr
 clock => a_dpfifo_bb01:dpfifo.clock
 data[0] => a_dpfifo_bb01:dpfifo.data[0]
@@ -8569,7 +8422,7 @@ usedw[5] <= a_dpfifo_bb01:dpfifo.usedw[5]
 wrreq => a_dpfifo_bb01:dpfifo.wreq
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo
 aclr => a_fefifo_7cf:fifo_state.aclr
 aclr => cntr_n2b:rd_ptr_count.aclr
 aclr => cntr_n2b:wr_ptr.aclr
@@ -8615,7 +8468,7 @@ wreq => altsyncram_dtn1:FIFOram.wren_a
 wreq => cntr_n2b:wr_ptr.cnt_en
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state
 aclr => b_full.IN0
 aclr => b_non_empty.IN0
 aclr => cntr_337:count_usedw.aclr
@@ -8647,7 +8500,7 @@ wreq => _.IN0
 wreq => cntr_337:count_usedw.updown
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state|cntr_337:count_usedw
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|a_fefifo_7cf:fifo_state|cntr_337:count_usedw
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8673,7 +8526,7 @@ updown => counter_comb_bita4.DATAB
 updown => counter_comb_bita5.DATAB
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|altsyncram_dtn1:FIFOram
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|altsyncram_dtn1:FIFOram
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -8828,7 +8681,7 @@ wren_a => ram_block1a7.PORTAWE
 wren_a => ram_block1a7.ENA0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:rd_ptr_count
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:rd_ptr_count
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8848,7 +8701,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:wr_ptr
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|nios_setup_uart_scfifo_r:the_nios_setup_uart_scfifo_r|scfifo:rfifo|scfifo_9621:auto_generated|a_dpfifo_bb01:dpfifo|cntr_n2b:wr_ptr
 aclr => counter_reg_bit[5].IN0
 clock => counter_reg_bit[5].CLK
 clock => counter_reg_bit[4].CLK
@@ -8868,7 +8721,7 @@ sclr => _.IN0
 sclr => _.IN0
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic
 raw_tck => raw_tck.IN1
 tdi => tdi.IN1
 jtag_state_rti => ~NO_FANOUT~
@@ -8947,7 +8800,7 @@ t_dat[7] <= t_dat[7].DB_MAX_OUTPUT_PORT_TYPE
 t_pause <= t_pause~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst
 raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
 raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
 tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
@@ -9002,7 +8855,7 @@ adapted_tdo => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_ins
 adapted_ir_out[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[0]
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+|altera_max_10|nios_setup:nios|nios_setup_uart:uart|alt_jtag_atlantic:nios_setup_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
 raw_tck => adapted_tck.DATAIN
 raw_tms => adapted_tms.DATAIN
 tdi => adapted_tdi.DATAIN
@@ -9057,7 +8910,7 @@ adapted_tdo => tdo.DATAIN
 adapted_ir_out[0] => ir_out[0].DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0
 clk_0_clk_clk => clk_0_clk_clk.IN45
 nios2e_reset_reset_bridge_in_reset_reset => nios2e_reset_reset_bridge_in_reset_reset.IN45
 nios2e_data_master_address[0] => nios2e_data_master_address[0].IN1
@@ -9535,7 +9388,7 @@ uart_avalon_jtag_slave_waitrequest => uart_avalon_jtag_slave_waitrequest.IN1
 uart_avalon_jtag_slave_chipselect <= altera_merlin_slave_translator:uart_avalon_jtag_slave_translator.av_chipselect
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2e_data_master_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2e_data_master_translator
 clk => end_begintransfer.CLK
 clk => write_accepted.CLK
 clk => read_accepted.CLK
@@ -9748,7 +9601,7 @@ av_response[1] <= <GND>
 av_writeresponsevalid <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2e_instruction_master_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:nios2e_instruction_master_translator
 clk => read_accepted.CLK
 reset => read_accepted.ACLR
 uav_write <= <GND>
@@ -9953,7 +9806,7 @@ av_response[1] <= <GND>
 av_writeresponsevalid <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:uart_avalon_jtag_slave_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:uart_avalon_jtag_slave_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10227,7 +10080,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:nios2e_debug_mem_slave_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:nios2e_debug_mem_slave_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10521,7 +10374,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:onchip_memory_s1_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:onchip_memory_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -10752,7 +10605,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:switch_s1_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:switch_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11029,7 +10882,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:led_s1_translator
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:led_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -11306,7 +11159,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2e_data_master_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2e_data_master_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -11607,7 +11460,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2e_instruction_master_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_agent:nios2e_instruction_master_agent
 clk => hold_waitrequest.CLK
 reset => hold_waitrequest.PRESET
 av_address[0] => ~NO_FANOUT~
@@ -11908,7 +11761,7 @@ rp_endofpacket => ~NO_FANOUT~
 rp_ready <= <VCC>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:uart_avalon_jtag_slave_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:uart_avalon_jtag_slave_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -12516,7 +12369,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:uart_avalon_jtag_slave_agent|altera_merlin_burst_uncompressor:uncompressor
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:uart_avalon_jtag_slave_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -12732,7 +12585,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:uart_avalon_jtag_slave_agent_rsp_fifo
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:uart_avalon_jtag_slave_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -13485,7 +13338,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:nios2e_debug_mem_slave_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:nios2e_debug_mem_slave_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -14093,7 +13946,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:nios2e_debug_mem_slave_agent|altera_merlin_burst_uncompressor:uncompressor
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:nios2e_debug_mem_slave_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -14309,7 +14162,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2e_debug_mem_slave_agent_rsp_fifo
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:nios2e_debug_mem_slave_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -15062,7 +14915,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:onchip_memory_s1_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:onchip_memory_s1_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -15670,7 +15523,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:onchip_memory_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:onchip_memory_s1_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -15886,7 +15739,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory_s1_agent_rsp_fifo
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:onchip_memory_s1_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -16639,7 +16492,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switch_s1_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switch_s1_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -17247,7 +17100,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switch_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switch_s1_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -17463,7 +17316,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:switch_s1_agent_rsp_fifo
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:switch_s1_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -18216,7 +18069,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:led_s1_agent
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:led_s1_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -18824,7 +18677,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:led_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:led_s1_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -19040,7 +18893,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:led_s1_agent_rsp_fifo
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:led_s1_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -19793,7 +19646,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router:router
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router:router
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -20040,7 +19893,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router:router|nios_setup_mm_interconnect_0_router_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router:router|nios_setup_mm_interconnect_0_router_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <VCC>
 default_destination_id[2] <= <GND>
@@ -20061,7 +19914,7 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_001:router_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_001:router_001
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -20270,7 +20123,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_001:router_001|nios_setup_mm_interconnect_0_router_001_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_001:router_001|nios_setup_mm_interconnect_0_router_001_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <VCC>
 default_destination_id[2] <= <GND>
@@ -20291,7 +20144,7 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_002
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_002
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -20496,7 +20349,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_002|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_002|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -20517,237 +20370,7 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_003
-clk => ~NO_FANOUT~
-reset => ~NO_FANOUT~
-sink_valid => src_valid.DATAIN
-sink_data[0] => src_data[0].DATAIN
-sink_data[1] => src_data[1].DATAIN
-sink_data[2] => src_data[2].DATAIN
-sink_data[3] => src_data[3].DATAIN
-sink_data[4] => src_data[4].DATAIN
-sink_data[5] => src_data[5].DATAIN
-sink_data[6] => src_data[6].DATAIN
-sink_data[7] => src_data[7].DATAIN
-sink_data[8] => src_data[8].DATAIN
-sink_data[9] => src_data[9].DATAIN
-sink_data[10] => src_data[10].DATAIN
-sink_data[11] => src_data[11].DATAIN
-sink_data[12] => src_data[12].DATAIN
-sink_data[13] => src_data[13].DATAIN
-sink_data[14] => src_data[14].DATAIN
-sink_data[15] => src_data[15].DATAIN
-sink_data[16] => src_data[16].DATAIN
-sink_data[17] => src_data[17].DATAIN
-sink_data[18] => src_data[18].DATAIN
-sink_data[19] => src_data[19].DATAIN
-sink_data[20] => src_data[20].DATAIN
-sink_data[21] => src_data[21].DATAIN
-sink_data[22] => src_data[22].DATAIN
-sink_data[23] => src_data[23].DATAIN
-sink_data[24] => src_data[24].DATAIN
-sink_data[25] => src_data[25].DATAIN
-sink_data[26] => src_data[26].DATAIN
-sink_data[27] => src_data[27].DATAIN
-sink_data[28] => src_data[28].DATAIN
-sink_data[29] => src_data[29].DATAIN
-sink_data[30] => src_data[30].DATAIN
-sink_data[31] => src_data[31].DATAIN
-sink_data[32] => src_data[32].DATAIN
-sink_data[33] => src_data[33].DATAIN
-sink_data[34] => src_data[34].DATAIN
-sink_data[35] => src_data[35].DATAIN
-sink_data[36] => src_data[36].DATAIN
-sink_data[37] => src_data[37].DATAIN
-sink_data[38] => src_data[38].DATAIN
-sink_data[39] => src_data[39].DATAIN
-sink_data[40] => src_data[40].DATAIN
-sink_data[41] => src_data[41].DATAIN
-sink_data[42] => src_data[42].DATAIN
-sink_data[43] => src_data[43].DATAIN
-sink_data[44] => src_data[44].DATAIN
-sink_data[45] => src_data[45].DATAIN
-sink_data[46] => src_data[46].DATAIN
-sink_data[47] => src_data[47].DATAIN
-sink_data[48] => src_data[48].DATAIN
-sink_data[49] => src_data[49].DATAIN
-sink_data[50] => src_data[50].DATAIN
-sink_data[51] => src_data[51].DATAIN
-sink_data[52] => src_data[52].DATAIN
-sink_data[53] => src_data[53].DATAIN
-sink_data[54] => src_data[54].DATAIN
-sink_data[55] => always0.IN1
-sink_data[55] => src_data[55].DATAIN
-sink_data[56] => src_data[56].DATAIN
-sink_data[57] => src_data[57].DATAIN
-sink_data[58] => src_data[58].DATAIN
-sink_data[59] => src_data[59].DATAIN
-sink_data[60] => src_data[60].DATAIN
-sink_data[61] => src_data[61].DATAIN
-sink_data[62] => src_data[62].DATAIN
-sink_data[63] => src_data[63].DATAIN
-sink_data[64] => src_data[64].DATAIN
-sink_data[65] => src_data[65].DATAIN
-sink_data[66] => src_data[66].DATAIN
-sink_data[67] => src_data[67].DATAIN
-sink_data[68] => src_data[68].DATAIN
-sink_data[69] => src_data[69].DATAIN
-sink_data[70] => src_data[70].DATAIN
-sink_data[71] => src_data[71].DATAIN
-sink_data[72] => src_data[72].DATAIN
-sink_data[73] => src_data[73].DATAIN
-sink_data[74] => src_data[74].DATAIN
-sink_data[75] => src_data[75].DATAIN
-sink_data[76] => src_data[76].DATAIN
-sink_data[76] => Equal0.IN31
-sink_data[76] => Equal1.IN0
-sink_data[77] => src_data[77].DATAIN
-sink_data[77] => Equal0.IN30
-sink_data[77] => Equal1.IN31
-sink_data[78] => src_data[78].DATAIN
-sink_data[78] => Equal0.IN29
-sink_data[78] => Equal1.IN30
-sink_data[79] => src_data[79].DATAIN
-sink_data[80] => src_data[80].DATAIN
-sink_data[81] => src_data[81].DATAIN
-sink_data[82] => src_data[82].DATAIN
-sink_data[83] => src_data[83].DATAIN
-sink_data[84] => src_data[84].DATAIN
-sink_data[85] => src_data[85].DATAIN
-sink_data[86] => src_data[86].DATAIN
-sink_data[87] => src_data[87].DATAIN
-sink_data[88] => src_data[88].DATAIN
-sink_data[89] => src_data[89].DATAIN
-sink_data[90] => src_data[90].DATAIN
-sink_data[91] => src_data[91].DATAIN
-sink_startofpacket => src_startofpacket.DATAIN
-sink_endofpacket => src_endofpacket.DATAIN
-sink_ready <= src_ready.DB_MAX_OUTPUT_PORT_TYPE
-src_valid <= sink_valid.DB_MAX_OUTPUT_PORT_TYPE
-src_data[0] <= sink_data[0].DB_MAX_OUTPUT_PORT_TYPE
-src_data[1] <= sink_data[1].DB_MAX_OUTPUT_PORT_TYPE
-src_data[2] <= sink_data[2].DB_MAX_OUTPUT_PORT_TYPE
-src_data[3] <= sink_data[3].DB_MAX_OUTPUT_PORT_TYPE
-src_data[4] <= sink_data[4].DB_MAX_OUTPUT_PORT_TYPE
-src_data[5] <= sink_data[5].DB_MAX_OUTPUT_PORT_TYPE
-src_data[6] <= sink_data[6].DB_MAX_OUTPUT_PORT_TYPE
-src_data[7] <= sink_data[7].DB_MAX_OUTPUT_PORT_TYPE
-src_data[8] <= sink_data[8].DB_MAX_OUTPUT_PORT_TYPE
-src_data[9] <= sink_data[9].DB_MAX_OUTPUT_PORT_TYPE
-src_data[10] <= sink_data[10].DB_MAX_OUTPUT_PORT_TYPE
-src_data[11] <= sink_data[11].DB_MAX_OUTPUT_PORT_TYPE
-src_data[12] <= sink_data[12].DB_MAX_OUTPUT_PORT_TYPE
-src_data[13] <= sink_data[13].DB_MAX_OUTPUT_PORT_TYPE
-src_data[14] <= sink_data[14].DB_MAX_OUTPUT_PORT_TYPE
-src_data[15] <= sink_data[15].DB_MAX_OUTPUT_PORT_TYPE
-src_data[16] <= sink_data[16].DB_MAX_OUTPUT_PORT_TYPE
-src_data[17] <= sink_data[17].DB_MAX_OUTPUT_PORT_TYPE
-src_data[18] <= sink_data[18].DB_MAX_OUTPUT_PORT_TYPE
-src_data[19] <= sink_data[19].DB_MAX_OUTPUT_PORT_TYPE
-src_data[20] <= sink_data[20].DB_MAX_OUTPUT_PORT_TYPE
-src_data[21] <= sink_data[21].DB_MAX_OUTPUT_PORT_TYPE
-src_data[22] <= sink_data[22].DB_MAX_OUTPUT_PORT_TYPE
-src_data[23] <= sink_data[23].DB_MAX_OUTPUT_PORT_TYPE
-src_data[24] <= sink_data[24].DB_MAX_OUTPUT_PORT_TYPE
-src_data[25] <= sink_data[25].DB_MAX_OUTPUT_PORT_TYPE
-src_data[26] <= sink_data[26].DB_MAX_OUTPUT_PORT_TYPE
-src_data[27] <= sink_data[27].DB_MAX_OUTPUT_PORT_TYPE
-src_data[28] <= sink_data[28].DB_MAX_OUTPUT_PORT_TYPE
-src_data[29] <= sink_data[29].DB_MAX_OUTPUT_PORT_TYPE
-src_data[30] <= sink_data[30].DB_MAX_OUTPUT_PORT_TYPE
-src_data[31] <= sink_data[31].DB_MAX_OUTPUT_PORT_TYPE
-src_data[32] <= sink_data[32].DB_MAX_OUTPUT_PORT_TYPE
-src_data[33] <= sink_data[33].DB_MAX_OUTPUT_PORT_TYPE
-src_data[34] <= sink_data[34].DB_MAX_OUTPUT_PORT_TYPE
-src_data[35] <= sink_data[35].DB_MAX_OUTPUT_PORT_TYPE
-src_data[36] <= sink_data[36].DB_MAX_OUTPUT_PORT_TYPE
-src_data[37] <= sink_data[37].DB_MAX_OUTPUT_PORT_TYPE
-src_data[38] <= sink_data[38].DB_MAX_OUTPUT_PORT_TYPE
-src_data[39] <= sink_data[39].DB_MAX_OUTPUT_PORT_TYPE
-src_data[40] <= sink_data[40].DB_MAX_OUTPUT_PORT_TYPE
-src_data[41] <= sink_data[41].DB_MAX_OUTPUT_PORT_TYPE
-src_data[42] <= sink_data[42].DB_MAX_OUTPUT_PORT_TYPE
-src_data[43] <= sink_data[43].DB_MAX_OUTPUT_PORT_TYPE
-src_data[44] <= sink_data[44].DB_MAX_OUTPUT_PORT_TYPE
-src_data[45] <= sink_data[45].DB_MAX_OUTPUT_PORT_TYPE
-src_data[46] <= sink_data[46].DB_MAX_OUTPUT_PORT_TYPE
-src_data[47] <= sink_data[47].DB_MAX_OUTPUT_PORT_TYPE
-src_data[48] <= sink_data[48].DB_MAX_OUTPUT_PORT_TYPE
-src_data[49] <= sink_data[49].DB_MAX_OUTPUT_PORT_TYPE
-src_data[50] <= sink_data[50].DB_MAX_OUTPUT_PORT_TYPE
-src_data[51] <= sink_data[51].DB_MAX_OUTPUT_PORT_TYPE
-src_data[52] <= sink_data[52].DB_MAX_OUTPUT_PORT_TYPE
-src_data[53] <= sink_data[53].DB_MAX_OUTPUT_PORT_TYPE
-src_data[54] <= sink_data[54].DB_MAX_OUTPUT_PORT_TYPE
-src_data[55] <= sink_data[55].DB_MAX_OUTPUT_PORT_TYPE
-src_data[56] <= sink_data[56].DB_MAX_OUTPUT_PORT_TYPE
-src_data[57] <= sink_data[57].DB_MAX_OUTPUT_PORT_TYPE
-src_data[58] <= sink_data[58].DB_MAX_OUTPUT_PORT_TYPE
-src_data[59] <= sink_data[59].DB_MAX_OUTPUT_PORT_TYPE
-src_data[60] <= sink_data[60].DB_MAX_OUTPUT_PORT_TYPE
-src_data[61] <= sink_data[61].DB_MAX_OUTPUT_PORT_TYPE
-src_data[62] <= sink_data[62].DB_MAX_OUTPUT_PORT_TYPE
-src_data[63] <= sink_data[63].DB_MAX_OUTPUT_PORT_TYPE
-src_data[64] <= sink_data[64].DB_MAX_OUTPUT_PORT_TYPE
-src_data[65] <= sink_data[65].DB_MAX_OUTPUT_PORT_TYPE
-src_data[66] <= sink_data[66].DB_MAX_OUTPUT_PORT_TYPE
-src_data[67] <= sink_data[67].DB_MAX_OUTPUT_PORT_TYPE
-src_data[68] <= sink_data[68].DB_MAX_OUTPUT_PORT_TYPE
-src_data[69] <= sink_data[69].DB_MAX_OUTPUT_PORT_TYPE
-src_data[70] <= sink_data[70].DB_MAX_OUTPUT_PORT_TYPE
-src_data[71] <= sink_data[71].DB_MAX_OUTPUT_PORT_TYPE
-src_data[72] <= sink_data[72].DB_MAX_OUTPUT_PORT_TYPE
-src_data[73] <= sink_data[73].DB_MAX_OUTPUT_PORT_TYPE
-src_data[74] <= sink_data[74].DB_MAX_OUTPUT_PORT_TYPE
-src_data[75] <= sink_data[75].DB_MAX_OUTPUT_PORT_TYPE
-src_data[76] <= sink_data[76].DB_MAX_OUTPUT_PORT_TYPE
-src_data[77] <= sink_data[77].DB_MAX_OUTPUT_PORT_TYPE
-src_data[78] <= sink_data[78].DB_MAX_OUTPUT_PORT_TYPE
-src_data[79] <= sink_data[79].DB_MAX_OUTPUT_PORT_TYPE
-src_data[80] <= sink_data[80].DB_MAX_OUTPUT_PORT_TYPE
-src_data[81] <= sink_data[81].DB_MAX_OUTPUT_PORT_TYPE
-src_data[82] <= sink_data[82].DB_MAX_OUTPUT_PORT_TYPE
-src_data[83] <= sink_data[83].DB_MAX_OUTPUT_PORT_TYPE
-src_data[84] <= sink_data[84].DB_MAX_OUTPUT_PORT_TYPE
-src_data[85] <= sink_data[85].DB_MAX_OUTPUT_PORT_TYPE
-src_data[86] <= sink_data[86].DB_MAX_OUTPUT_PORT_TYPE
-src_data[87] <= sink_data[87].DB_MAX_OUTPUT_PORT_TYPE
-src_data[88] <= sink_data[88].DB_MAX_OUTPUT_PORT_TYPE
-src_data[89] <= sink_data[89].DB_MAX_OUTPUT_PORT_TYPE
-src_data[90] <= sink_data[90].DB_MAX_OUTPUT_PORT_TYPE
-src_data[91] <= sink_data[91].DB_MAX_OUTPUT_PORT_TYPE
-src_channel[0] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
-src_channel[1] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
-src_channel[2] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
-src_channel[3] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
-src_channel[4] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
-src_startofpacket <= sink_startofpacket.DB_MAX_OUTPUT_PORT_TYPE
-src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
-src_ready => sink_ready.DATAIN
-
-
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_003|nios_setup_mm_interconnect_0_router_003_default_decode:the_default_decode
-default_destination_id[0] <= <GND>
-default_destination_id[1] <= <GND>
-default_destination_id[2] <= <GND>
-default_wr_channel[0] <= <GND>
-default_wr_channel[1] <= <GND>
-default_wr_channel[2] <= <GND>
-default_wr_channel[3] <= <GND>
-default_wr_channel[4] <= <GND>
-default_rd_channel[0] <= <GND>
-default_rd_channel[1] <= <GND>
-default_rd_channel[2] <= <GND>
-default_rd_channel[3] <= <GND>
-default_rd_channel[4] <= <GND>
-default_src_channel[0] <= <VCC>
-default_src_channel[1] <= <GND>
-default_src_channel[2] <= <GND>
-default_src_channel[3] <= <GND>
-default_src_channel[4] <= <GND>
-
-
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_004
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_003
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -20956,7 +20579,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_004|nios_setup_mm_interconnect_0_router_003_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_003|nios_setup_mm_interconnect_0_router_003_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -20977,7 +20600,237 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_005
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_004
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+sink_valid => src_valid.DATAIN
+sink_data[0] => src_data[0].DATAIN
+sink_data[1] => src_data[1].DATAIN
+sink_data[2] => src_data[2].DATAIN
+sink_data[3] => src_data[3].DATAIN
+sink_data[4] => src_data[4].DATAIN
+sink_data[5] => src_data[5].DATAIN
+sink_data[6] => src_data[6].DATAIN
+sink_data[7] => src_data[7].DATAIN
+sink_data[8] => src_data[8].DATAIN
+sink_data[9] => src_data[9].DATAIN
+sink_data[10] => src_data[10].DATAIN
+sink_data[11] => src_data[11].DATAIN
+sink_data[12] => src_data[12].DATAIN
+sink_data[13] => src_data[13].DATAIN
+sink_data[14] => src_data[14].DATAIN
+sink_data[15] => src_data[15].DATAIN
+sink_data[16] => src_data[16].DATAIN
+sink_data[17] => src_data[17].DATAIN
+sink_data[18] => src_data[18].DATAIN
+sink_data[19] => src_data[19].DATAIN
+sink_data[20] => src_data[20].DATAIN
+sink_data[21] => src_data[21].DATAIN
+sink_data[22] => src_data[22].DATAIN
+sink_data[23] => src_data[23].DATAIN
+sink_data[24] => src_data[24].DATAIN
+sink_data[25] => src_data[25].DATAIN
+sink_data[26] => src_data[26].DATAIN
+sink_data[27] => src_data[27].DATAIN
+sink_data[28] => src_data[28].DATAIN
+sink_data[29] => src_data[29].DATAIN
+sink_data[30] => src_data[30].DATAIN
+sink_data[31] => src_data[31].DATAIN
+sink_data[32] => src_data[32].DATAIN
+sink_data[33] => src_data[33].DATAIN
+sink_data[34] => src_data[34].DATAIN
+sink_data[35] => src_data[35].DATAIN
+sink_data[36] => src_data[36].DATAIN
+sink_data[37] => src_data[37].DATAIN
+sink_data[38] => src_data[38].DATAIN
+sink_data[39] => src_data[39].DATAIN
+sink_data[40] => src_data[40].DATAIN
+sink_data[41] => src_data[41].DATAIN
+sink_data[42] => src_data[42].DATAIN
+sink_data[43] => src_data[43].DATAIN
+sink_data[44] => src_data[44].DATAIN
+sink_data[45] => src_data[45].DATAIN
+sink_data[46] => src_data[46].DATAIN
+sink_data[47] => src_data[47].DATAIN
+sink_data[48] => src_data[48].DATAIN
+sink_data[49] => src_data[49].DATAIN
+sink_data[50] => src_data[50].DATAIN
+sink_data[51] => src_data[51].DATAIN
+sink_data[52] => src_data[52].DATAIN
+sink_data[53] => src_data[53].DATAIN
+sink_data[54] => src_data[54].DATAIN
+sink_data[55] => always0.IN1
+sink_data[55] => src_data[55].DATAIN
+sink_data[56] => src_data[56].DATAIN
+sink_data[57] => src_data[57].DATAIN
+sink_data[58] => src_data[58].DATAIN
+sink_data[59] => src_data[59].DATAIN
+sink_data[60] => src_data[60].DATAIN
+sink_data[61] => src_data[61].DATAIN
+sink_data[62] => src_data[62].DATAIN
+sink_data[63] => src_data[63].DATAIN
+sink_data[64] => src_data[64].DATAIN
+sink_data[65] => src_data[65].DATAIN
+sink_data[66] => src_data[66].DATAIN
+sink_data[67] => src_data[67].DATAIN
+sink_data[68] => src_data[68].DATAIN
+sink_data[69] => src_data[69].DATAIN
+sink_data[70] => src_data[70].DATAIN
+sink_data[71] => src_data[71].DATAIN
+sink_data[72] => src_data[72].DATAIN
+sink_data[73] => src_data[73].DATAIN
+sink_data[74] => src_data[74].DATAIN
+sink_data[75] => src_data[75].DATAIN
+sink_data[76] => src_data[76].DATAIN
+sink_data[76] => Equal0.IN31
+sink_data[76] => Equal1.IN0
+sink_data[77] => src_data[77].DATAIN
+sink_data[77] => Equal0.IN30
+sink_data[77] => Equal1.IN31
+sink_data[78] => src_data[78].DATAIN
+sink_data[78] => Equal0.IN29
+sink_data[78] => Equal1.IN30
+sink_data[79] => src_data[79].DATAIN
+sink_data[80] => src_data[80].DATAIN
+sink_data[81] => src_data[81].DATAIN
+sink_data[82] => src_data[82].DATAIN
+sink_data[83] => src_data[83].DATAIN
+sink_data[84] => src_data[84].DATAIN
+sink_data[85] => src_data[85].DATAIN
+sink_data[86] => src_data[86].DATAIN
+sink_data[87] => src_data[87].DATAIN
+sink_data[88] => src_data[88].DATAIN
+sink_data[89] => src_data[89].DATAIN
+sink_data[90] => src_data[90].DATAIN
+sink_data[91] => src_data[91].DATAIN
+sink_startofpacket => src_startofpacket.DATAIN
+sink_endofpacket => src_endofpacket.DATAIN
+sink_ready <= src_ready.DB_MAX_OUTPUT_PORT_TYPE
+src_valid <= sink_valid.DB_MAX_OUTPUT_PORT_TYPE
+src_data[0] <= sink_data[0].DB_MAX_OUTPUT_PORT_TYPE
+src_data[1] <= sink_data[1].DB_MAX_OUTPUT_PORT_TYPE
+src_data[2] <= sink_data[2].DB_MAX_OUTPUT_PORT_TYPE
+src_data[3] <= sink_data[3].DB_MAX_OUTPUT_PORT_TYPE
+src_data[4] <= sink_data[4].DB_MAX_OUTPUT_PORT_TYPE
+src_data[5] <= sink_data[5].DB_MAX_OUTPUT_PORT_TYPE
+src_data[6] <= sink_data[6].DB_MAX_OUTPUT_PORT_TYPE
+src_data[7] <= sink_data[7].DB_MAX_OUTPUT_PORT_TYPE
+src_data[8] <= sink_data[8].DB_MAX_OUTPUT_PORT_TYPE
+src_data[9] <= sink_data[9].DB_MAX_OUTPUT_PORT_TYPE
+src_data[10] <= sink_data[10].DB_MAX_OUTPUT_PORT_TYPE
+src_data[11] <= sink_data[11].DB_MAX_OUTPUT_PORT_TYPE
+src_data[12] <= sink_data[12].DB_MAX_OUTPUT_PORT_TYPE
+src_data[13] <= sink_data[13].DB_MAX_OUTPUT_PORT_TYPE
+src_data[14] <= sink_data[14].DB_MAX_OUTPUT_PORT_TYPE
+src_data[15] <= sink_data[15].DB_MAX_OUTPUT_PORT_TYPE
+src_data[16] <= sink_data[16].DB_MAX_OUTPUT_PORT_TYPE
+src_data[17] <= sink_data[17].DB_MAX_OUTPUT_PORT_TYPE
+src_data[18] <= sink_data[18].DB_MAX_OUTPUT_PORT_TYPE
+src_data[19] <= sink_data[19].DB_MAX_OUTPUT_PORT_TYPE
+src_data[20] <= sink_data[20].DB_MAX_OUTPUT_PORT_TYPE
+src_data[21] <= sink_data[21].DB_MAX_OUTPUT_PORT_TYPE
+src_data[22] <= sink_data[22].DB_MAX_OUTPUT_PORT_TYPE
+src_data[23] <= sink_data[23].DB_MAX_OUTPUT_PORT_TYPE
+src_data[24] <= sink_data[24].DB_MAX_OUTPUT_PORT_TYPE
+src_data[25] <= sink_data[25].DB_MAX_OUTPUT_PORT_TYPE
+src_data[26] <= sink_data[26].DB_MAX_OUTPUT_PORT_TYPE
+src_data[27] <= sink_data[27].DB_MAX_OUTPUT_PORT_TYPE
+src_data[28] <= sink_data[28].DB_MAX_OUTPUT_PORT_TYPE
+src_data[29] <= sink_data[29].DB_MAX_OUTPUT_PORT_TYPE
+src_data[30] <= sink_data[30].DB_MAX_OUTPUT_PORT_TYPE
+src_data[31] <= sink_data[31].DB_MAX_OUTPUT_PORT_TYPE
+src_data[32] <= sink_data[32].DB_MAX_OUTPUT_PORT_TYPE
+src_data[33] <= sink_data[33].DB_MAX_OUTPUT_PORT_TYPE
+src_data[34] <= sink_data[34].DB_MAX_OUTPUT_PORT_TYPE
+src_data[35] <= sink_data[35].DB_MAX_OUTPUT_PORT_TYPE
+src_data[36] <= sink_data[36].DB_MAX_OUTPUT_PORT_TYPE
+src_data[37] <= sink_data[37].DB_MAX_OUTPUT_PORT_TYPE
+src_data[38] <= sink_data[38].DB_MAX_OUTPUT_PORT_TYPE
+src_data[39] <= sink_data[39].DB_MAX_OUTPUT_PORT_TYPE
+src_data[40] <= sink_data[40].DB_MAX_OUTPUT_PORT_TYPE
+src_data[41] <= sink_data[41].DB_MAX_OUTPUT_PORT_TYPE
+src_data[42] <= sink_data[42].DB_MAX_OUTPUT_PORT_TYPE
+src_data[43] <= sink_data[43].DB_MAX_OUTPUT_PORT_TYPE
+src_data[44] <= sink_data[44].DB_MAX_OUTPUT_PORT_TYPE
+src_data[45] <= sink_data[45].DB_MAX_OUTPUT_PORT_TYPE
+src_data[46] <= sink_data[46].DB_MAX_OUTPUT_PORT_TYPE
+src_data[47] <= sink_data[47].DB_MAX_OUTPUT_PORT_TYPE
+src_data[48] <= sink_data[48].DB_MAX_OUTPUT_PORT_TYPE
+src_data[49] <= sink_data[49].DB_MAX_OUTPUT_PORT_TYPE
+src_data[50] <= sink_data[50].DB_MAX_OUTPUT_PORT_TYPE
+src_data[51] <= sink_data[51].DB_MAX_OUTPUT_PORT_TYPE
+src_data[52] <= sink_data[52].DB_MAX_OUTPUT_PORT_TYPE
+src_data[53] <= sink_data[53].DB_MAX_OUTPUT_PORT_TYPE
+src_data[54] <= sink_data[54].DB_MAX_OUTPUT_PORT_TYPE
+src_data[55] <= sink_data[55].DB_MAX_OUTPUT_PORT_TYPE
+src_data[56] <= sink_data[56].DB_MAX_OUTPUT_PORT_TYPE
+src_data[57] <= sink_data[57].DB_MAX_OUTPUT_PORT_TYPE
+src_data[58] <= sink_data[58].DB_MAX_OUTPUT_PORT_TYPE
+src_data[59] <= sink_data[59].DB_MAX_OUTPUT_PORT_TYPE
+src_data[60] <= sink_data[60].DB_MAX_OUTPUT_PORT_TYPE
+src_data[61] <= sink_data[61].DB_MAX_OUTPUT_PORT_TYPE
+src_data[62] <= sink_data[62].DB_MAX_OUTPUT_PORT_TYPE
+src_data[63] <= sink_data[63].DB_MAX_OUTPUT_PORT_TYPE
+src_data[64] <= sink_data[64].DB_MAX_OUTPUT_PORT_TYPE
+src_data[65] <= sink_data[65].DB_MAX_OUTPUT_PORT_TYPE
+src_data[66] <= sink_data[66].DB_MAX_OUTPUT_PORT_TYPE
+src_data[67] <= sink_data[67].DB_MAX_OUTPUT_PORT_TYPE
+src_data[68] <= sink_data[68].DB_MAX_OUTPUT_PORT_TYPE
+src_data[69] <= sink_data[69].DB_MAX_OUTPUT_PORT_TYPE
+src_data[70] <= sink_data[70].DB_MAX_OUTPUT_PORT_TYPE
+src_data[71] <= sink_data[71].DB_MAX_OUTPUT_PORT_TYPE
+src_data[72] <= sink_data[72].DB_MAX_OUTPUT_PORT_TYPE
+src_data[73] <= sink_data[73].DB_MAX_OUTPUT_PORT_TYPE
+src_data[74] <= sink_data[74].DB_MAX_OUTPUT_PORT_TYPE
+src_data[75] <= sink_data[75].DB_MAX_OUTPUT_PORT_TYPE
+src_data[76] <= sink_data[76].DB_MAX_OUTPUT_PORT_TYPE
+src_data[77] <= sink_data[77].DB_MAX_OUTPUT_PORT_TYPE
+src_data[78] <= sink_data[78].DB_MAX_OUTPUT_PORT_TYPE
+src_data[79] <= sink_data[79].DB_MAX_OUTPUT_PORT_TYPE
+src_data[80] <= sink_data[80].DB_MAX_OUTPUT_PORT_TYPE
+src_data[81] <= sink_data[81].DB_MAX_OUTPUT_PORT_TYPE
+src_data[82] <= sink_data[82].DB_MAX_OUTPUT_PORT_TYPE
+src_data[83] <= sink_data[83].DB_MAX_OUTPUT_PORT_TYPE
+src_data[84] <= sink_data[84].DB_MAX_OUTPUT_PORT_TYPE
+src_data[85] <= sink_data[85].DB_MAX_OUTPUT_PORT_TYPE
+src_data[86] <= sink_data[86].DB_MAX_OUTPUT_PORT_TYPE
+src_data[87] <= sink_data[87].DB_MAX_OUTPUT_PORT_TYPE
+src_data[88] <= sink_data[88].DB_MAX_OUTPUT_PORT_TYPE
+src_data[89] <= sink_data[89].DB_MAX_OUTPUT_PORT_TYPE
+src_data[90] <= sink_data[90].DB_MAX_OUTPUT_PORT_TYPE
+src_data[91] <= sink_data[91].DB_MAX_OUTPUT_PORT_TYPE
+src_channel[0] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
+src_channel[1] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
+src_channel[2] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
+src_channel[3] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
+src_channel[4] <= src_channel.DB_MAX_OUTPUT_PORT_TYPE
+src_startofpacket <= sink_startofpacket.DB_MAX_OUTPUT_PORT_TYPE
+src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
+src_ready => sink_ready.DATAIN
+
+
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_003:router_004|nios_setup_mm_interconnect_0_router_003_default_decode:the_default_decode
+default_destination_id[0] <= <GND>
+default_destination_id[1] <= <GND>
+default_destination_id[2] <= <GND>
+default_wr_channel[0] <= <GND>
+default_wr_channel[1] <= <GND>
+default_wr_channel[2] <= <GND>
+default_wr_channel[3] <= <GND>
+default_wr_channel[4] <= <GND>
+default_rd_channel[0] <= <GND>
+default_rd_channel[1] <= <GND>
+default_rd_channel[2] <= <GND>
+default_rd_channel[3] <= <GND>
+default_rd_channel[4] <= <GND>
+default_src_channel[0] <= <VCC>
+default_src_channel[1] <= <GND>
+default_src_channel[2] <= <GND>
+default_src_channel[3] <= <GND>
+default_src_channel[4] <= <GND>
+
+
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_005
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -21182,7 +21035,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_005|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_005|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -21203,7 +21056,7 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_006
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_006
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 sink_valid => src_valid.DATAIN
@@ -21408,7 +21261,7 @@ src_endofpacket <= sink_endofpacket.DB_MAX_OUTPUT_PORT_TYPE
 src_ready => sink_ready.DATAIN
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_006|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_router_002:router_006|nios_setup_mm_interconnect_0_router_002_default_decode:the_default_decode
 default_destination_id[0] <= <GND>
 default_destination_id[1] <= <GND>
 default_destination_id[2] <= <GND>
@@ -21429,7 +21282,7 @@ default_src_channel[3] <= <GND>
 default_src_channel[4] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux:cmd_demux
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux:cmd_demux
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_valid[0] => src2_valid.IN0
@@ -22425,7 +22278,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:cmd_demux_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:cmd_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -22833,7 +22686,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux
 sink0_valid => src_valid.DATAIN
 sink0_data[0] => src_data[0].DATAIN
 sink0_data[1] => src_data[1].DATAIN
@@ -23040,7 +22893,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -23354,7 +23207,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001|altera_merlin_arbitrator:arb
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -23376,7 +23229,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -23397,7 +23250,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002
 sink0_valid => request.IN1
 sink0_valid => src_valid.IN1
 sink0_data[0] => src_payload.IN1
@@ -23711,7 +23564,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002|altera_merlin_arbitrator:arb
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002|altera_merlin_arbitrator:arb
 clk => top_priority_reg[0].CLK
 clk => top_priority_reg[1].CLK
 reset => top_priority_reg[0].PRESET
@@ -23733,7 +23586,7 @@ increment_top_priority => top_priority_reg.OUTPUTSELECT
 save_top_priority => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux_001:cmd_mux_002|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -23754,7 +23607,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux_003
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux_003
 sink0_valid => src_valid.DATAIN
 sink0_data[0] => src_data[0].DATAIN
 sink0_data[1] => src_data[1].DATAIN
@@ -23961,7 +23814,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux_004
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_mux:cmd_mux_004
 sink0_valid => src_valid.DATAIN
 sink0_data[0] => src_data[0].DATAIN
 sink0_data[1] => src_data[1].DATAIN
@@ -24168,7 +24021,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -24376,7 +24229,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:rsp_demux_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:rsp_demux_001
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -24784,7 +24637,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:rsp_demux_002
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_cmd_demux_001:rsp_demux_002
 sink_valid[0] => src0_valid.IN0
 sink_valid[0] => src1_valid.IN0
 sink_data[0] => src1_data[0].DATAIN
@@ -25192,7 +25045,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux_003
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux_003
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -25400,7 +25253,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux_004
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_demux:rsp_demux_004
 sink_valid[0] => src0_valid.IN0
 sink_data[0] => src0_data[0].DATAIN
 sink_data[1] => src0_data[1].DATAIN
@@ -25608,7 +25461,7 @@ clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -26229,7 +26082,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux|altera_merlin_arbitrator:arb
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -26256,7 +26109,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux:rsp_mux|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => Add0.IN10
 a[1] => Add0.IN9
 a[2] => Add0.IN8
@@ -26289,7 +26142,7 @@ sum[8] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 sum[9] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001
 sink0_valid => request[0].IN1
 sink0_data[0] => src_payload.IN1
 sink0_data[1] => src_payload.IN1
@@ -26601,7 +26454,7 @@ clk => clk.IN1
 reset => reset.IN1
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001|altera_merlin_arbitrator:arb
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001|altera_merlin_arbitrator:arb
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 request[0] => grant[0].DATAIN
@@ -26616,7 +26469,7 @@ increment_top_priority => ~NO_FANOUT~
 save_top_priority => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_rsp_mux_001:rsp_mux_001|altera_merlin_arbitrator:arb|altera_merlin_arb_adder:adder
 a[0] => sum.IN0
 a[0] => full_adder.cout[0].IN0
 a[1] => cout.IN0
@@ -26637,7 +26490,7 @@ sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -26715,7 +26568,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -26793,7 +26646,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_001
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_001
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -26871,7 +26724,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_001|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_001|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -26949,7 +26802,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_002
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_002
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -27027,7 +26880,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_002|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_002|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -27105,7 +26958,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_003
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_003
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -27183,7 +27036,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_003|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_003|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -27261,7 +27114,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_004
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_004
 in_clk_0_clk => in_clk_0_clk.IN1
 in_rst_0_reset => _.IN1
 in_0_data[0] => in_0_data[0].IN1
@@ -27339,7 +27192,7 @@ out_0_ready => out_0_ready.IN1
 out_0_error[0] <= nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0.out_error
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_004|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
+|altera_max_10|nios_setup:nios|nios_setup_mm_interconnect_0:mm_interconnect_0|nios_setup_mm_interconnect_0_avalon_st_adapter:avalon_st_adapter_004|nios_setup_mm_interconnect_0_avalon_st_adapter_error_adapter_0:error_adapter_0
 in_ready <= out_ready.DB_MAX_OUTPUT_PORT_TYPE
 in_valid => out_valid.DATAIN
 in_data[0] => out_data[0].DATAIN
@@ -27417,7 +27270,7 @@ clk => ~NO_FANOUT~
 reset_n => ~NO_FANOUT~
 
 
-|ethernet_packet_analyzer|nios_setup:nios|nios_setup_irq_mapper:irq_mapper
+|altera_max_10|nios_setup:nios|nios_setup_irq_mapper:irq_mapper
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 receiver0_irq => sender_irq[0].DATAIN
@@ -27455,7 +27308,7 @@ sender_irq[30] <= <GND>
 sender_irq[31] <= <GND>
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -27493,7 +27346,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -27503,7 +27356,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
@@ -27511,7 +27364,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller_001
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller_001
 reset_in0 => merged_reset.IN0
 reset_in1 => merged_reset.IN1
 reset_in2 => merged_reset.IN1
@@ -27549,7 +27402,7 @@ reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
 reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain_out.PRESET
 reset_in => altera_reset_synchronizer_int_chain[0].PRESET
 reset_in => altera_reset_synchronizer_int_chain[1].PRESET
@@ -27559,7 +27412,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ethernet_packet_analyzer|nios_setup:nios|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
+|altera_max_10|nios_setup:nios|altera_reset_controller:rst_controller_001|altera_reset_synchronizer:alt_rst_req_sync_uq1
 reset_in => altera_reset_synchronizer_int_chain[1].DATAIN
 clk => altera_reset_synchronizer_int_chain_out.CLK
 clk => altera_reset_synchronizer_int_chain[0].CLK
