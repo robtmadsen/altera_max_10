@@ -246,136 +246,191 @@ module  altera_max_10(
     reg        turnaround_z_done;
     reg        turnaround_0_ignored;
 
-	always @ (posedge enet_mdc_clk) begin
-		if (CPU_RESETn == 0) begin
-			write_enet_mdio <= 0; // drive z onto inout
-		    enet_mdio_bit_count <= 0;
-		    enet_mdio_read_count <= 0;
-			phy_wait_after_reset_count <= 0;
-			phy_read_done <= 0;
-			bits_read_from_phy <= 0;
-			phy_preamble_count <= 0;
-			turnaround_z_done  <= 0;
-			turnaround_0_ignored <= 0;
-			phy_reg_0  <= 0;
-			phy_reg_1  <= 0;
-			phy_reg_2  <= 0;
-			phy_reg_3  <= 0;
-			phy_reg_4  <= 0;
-			phy_reg_5  <= 0;
-			phy_reg_6  <= 0;
-			phy_reg_7  <= 0;
-			phy_reg_8  <= 0;
-			phy_reg_9  <= 0;
-			phy_reg_10 <= 0;
-			phy_reg_11 <= 0;
-			phy_reg_12 <= 0;
-			phy_reg_13 <= 0;
-			phy_reg_14 <= 0;
-			phy_reg_15 <= 0;
-			phy_reg_16 <= 0;
-			phy_reg_17 <= 0;
-			phy_reg_18 <= 0;
-			phy_reg_19 <= 0;
-			phy_reg_20 <= 0;
-			phy_reg_21 <= 0;
-			phy_reg_22 <= 0;
-			phy_reg_23 <= 0;
-			phy_reg_24 <= 0;
-			phy_reg_25 <= 0;
-			phy_reg_26 <= 0;
-			phy_reg_27 <= 0;
-			phy_reg_28 <= 0;
-			phy_reg_29 <= 0;
-			phy_reg_30 <= 0;
-			phy_reg_31 <= 0;
-			phy_registers_read <= 0;
-			bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
-		    reg_LED1 <= 1'b0;
-		end
-		// according to Marvel 88E1111 spec, phy is ready 5ms after reset.
-		// count to 'd12,500 using a 2.5MHz clock to wait 5ms
-		else if (phy_wait_after_reset_count < 'd125000000) begin
-			phy_wait_after_reset_count <= phy_wait_after_reset_count + 1;
-		end
-		// first, send the 32-bit premable mentioned on page 81, Table 38
-		else if (phy_preamble_count < 32) begin
-			write_enet_mdio <= 1;
-			enet_mdio <= 1'b1; // the premable is all 1s
-			phy_preamble_count <= phy_preamble_count + 1;
-		end
-		// then, issue the read command to the PHY
-		else if (enet_mdio_bit_count < 14) begin
-			write_enet_mdio <= 1;
-			bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
-			enet_mdio <= bits_to_read_phy[13-enet_mdio_bit_count];
-			enet_mdio_bit_count <= enet_mdio_bit_count + 1;
-		// then, drive the z of the turn around
-		end else if (turnaround_z_done != 1) begin
-			write_enet_mdio <= 0; // drive z onto inout
-			turnaround_z_done <= 1;
-		// then, ignore the first 0 back from ENET_MDIO
-		end else if (turnaround_0_ignored != 1) begin
-			write_enet_mdio <= 0; // drive z onto inout ???
-			turnaround_0_ignored <= 1;
-		// then, capture the PHY's read response
-		end else if (enet_mdio_read_count <= 16) begin
-			//phy_reg_2 <= {phy_reg_2[14:0], ENET_MDIO}; // rewrite them all to this? DELETE THIS once working
-			write_enet_mdio <= 0; // drive z onto inout
-			bits_read_from_phy <= {bits_read_from_phy[14:0], ENET_MDIO};
-			enet_mdio_read_count <= enet_mdio_read_count + 1;
-		// finished reading a PHY register, reset the counts
-		end else if (phy_registers_read < 'd32) begin
-			phy_registers_read <= phy_registers_read + 1;
-			case(phy_registers_read)
-			    5'd0:  phy_reg_0  <= bits_read_from_phy;
-			    5'd1:  phy_reg_1  <= bits_read_from_phy;
-			    5'd2:  phy_reg_2  <= bits_read_from_phy;
-			    5'd3:  phy_reg_3  <= bits_read_from_phy;
-			    5'd4:  phy_reg_4  <= bits_read_from_phy;
-			    5'd5:  phy_reg_5  <= bits_read_from_phy;
-			    5'd6:  phy_reg_6  <= bits_read_from_phy;
-			    5'd7:  phy_reg_7  <= bits_read_from_phy;
-			    5'd8:  phy_reg_8  <= bits_read_from_phy;
-			    5'd9:  phy_reg_9  <= bits_read_from_phy;
-			    5'd10: phy_reg_10 <= bits_read_from_phy;
-			    5'd11: phy_reg_11 <= bits_read_from_phy;
-			    5'd12: phy_reg_12 <= bits_read_from_phy;
-			    5'd13: phy_reg_13 <= bits_read_from_phy;
-			    5'd14: phy_reg_14 <= bits_read_from_phy;
-			    5'd15: phy_reg_15 <= bits_read_from_phy;
-			    5'd16: phy_reg_16 <= bits_read_from_phy;
-			    5'd17: phy_reg_17 <= bits_read_from_phy;
-			    5'd18: phy_reg_18 <= bits_read_from_phy;
-			    5'd19: phy_reg_19 <= bits_read_from_phy;
-			    5'd20: phy_reg_20 <= bits_read_from_phy;
-			    5'd21: phy_reg_21 <= bits_read_from_phy;
-			    5'd22: phy_reg_22 <= bits_read_from_phy;
-			    5'd23: phy_reg_23 <= bits_read_from_phy;
-			    5'd24: phy_reg_24 <= bits_read_from_phy;
-			    5'd25: phy_reg_25 <= bits_read_from_phy;
-			    5'd26: phy_reg_26 <= bits_read_from_phy;
-			    5'd27: phy_reg_27 <= bits_read_from_phy;
-			    5'd28: phy_reg_28 <= bits_read_from_phy;
-			    5'd29: phy_reg_29 <= bits_read_from_phy;
-			    5'd30: phy_reg_30 <= bits_read_from_phy;
-			    5'd31: phy_reg_31 <= bits_read_from_phy;
-                // Reg 2 should always be 'h0141 (the OUI), so if reg2 = FFFF there was a problem
-			    default: phy_reg_2 <= 32'hFFFF; 
-			endcase
+    localparam  RESET_s           = 4'h0,
+                POST_RST_WAIT_s   = 4'h1,
+                PHY_PREAMBLE_s    = 4'h2,
+                SEND_READ_CMD_s   = 4'h3,
+                TURNAROUND_z_s    = 4'h4,
+                TURNAROUND_0_s    = 4'h5,
+                READ_s            = 4'h6,
+                STORE_READ_DATA_s = 4'h7,
+                PHY_READ_DONE_s   = 4'h8;
+                // TODO add placeholder states for the rest of the bits
+    reg [3:0]   current_state, next_state;
 
-			enet_mdio_bit_count  <= 0;
-			enet_mdio_read_count <= 0;
-			phy_preamble_count   <= 0;
-			turnaround_z_done    <= 0;
-			turnaround_0_ignored <= 0;
-			bits_read_from_phy   <= 0;
-		end
-		else if (phy_registers_read == 'd32) begin
-		    reg_LED1 <= 1'b1;
-			phy_read_done <= 1;
-		end
-	end
+    always @ (posedge enet_mdc_clk) begin
+        if (CPU_RESETn == 0) begin
+            current_state <= RESET_s;
+        end else begin
+            current_state <= next_state;
+        end
+    end
+
+    always @ (*) begin
+        next_state = current_state; // default value
+        if (CPU_RESETn == 0) begin
+            next_state = RESET_s;
+        end 
+        else begin
+            case (current_state)
+                RESET_s : begin
+                    if (CPU_RESETn == 1) next_state = POST_RST_WAIT_s;
+                end
+                POST_RST_WAIT_s : begin
+                    if (phy_wait_after_reset_count == 'd125000000) next_state = PHY_PREAMBLE_s;
+                end
+                PHY_PREAMBLE_s : begin
+                    if (phy_preamble_count == 'd32 /*31?*/) next_state = SEND_READ_CMD_s;
+                end
+                SEND_READ_CMD_s : begin
+                    if (enet_mdio_bit_count == 'd14 /*?*/) next_state = TURNAROUND_z_s;
+                end
+                TURNAROUND_z_s : begin
+                    next_state = TURNAROUND_0_s;
+                end
+                TURNAROUND_0_s : begin
+                    next_state = READ_s;
+                end
+                READ_s : begin
+                    if (enet_mdio_read_count == 'd15 /*?*/) next_state = STORE_READ_DATA_s;
+                end
+                STORE_READ_DATA_s : begin
+                    if (phy_registers_read == 'd31 /*?*/) next_state = PHY_READ_DONE_s;
+                    else next_state = PHY_PREAMBLE_s; 
+                end
+                PHY_READ_DONE_s : begin
+                end
+                // TODO add placeholder states
+            endcase
+        end
+    end
+
+    always @ (posedge enet_mdc_clk) begin
+        case (current_state)
+        RESET_s : begin
+            write_enet_mdio <= 0; // drive z onto inout
+            enet_mdio_bit_count <= 0;
+            enet_mdio_read_count <= 0;
+            phy_wait_after_reset_count <= 0;
+            phy_read_done <= 0;
+            bits_read_from_phy <= 0;
+            phy_preamble_count <= 0;
+            turnaround_z_done  <= 0;
+            turnaround_0_ignored <= 0;
+            phy_reg_0  <= 0;
+            phy_reg_1  <= 0;
+            phy_reg_2  <= 0;
+            phy_reg_3  <= 0;
+            phy_reg_4  <= 0;
+            phy_reg_5  <= 0;
+            phy_reg_6  <= 0;
+            phy_reg_7  <= 0;
+            phy_reg_8  <= 0;
+            phy_reg_9  <= 0;
+            phy_reg_10 <= 0;
+            phy_reg_11 <= 0;
+            phy_reg_12 <= 0;
+            phy_reg_13 <= 0;
+            phy_reg_14 <= 0;
+            phy_reg_15 <= 0;
+            phy_reg_16 <= 0;
+            phy_reg_17 <= 0;
+            phy_reg_18 <= 0;
+            phy_reg_19 <= 0;
+            phy_reg_20 <= 0;
+            phy_reg_21 <= 0;
+            phy_reg_22 <= 0;
+            phy_reg_23 <= 0;
+            phy_reg_24 <= 0;
+            phy_reg_25 <= 0;
+            phy_reg_26 <= 0;
+            phy_reg_27 <= 0;
+            phy_reg_28 <= 0;
+            phy_reg_29 <= 0;
+            phy_reg_30 <= 0;
+            phy_reg_31 <= 0;
+            phy_registers_read <= 0;
+            bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
+            reg_LED1 <= 1'b0;
+        end
+        POST_RST_WAIT_s: begin
+            phy_wait_after_reset_count <= phy_wait_after_reset_count + 1;
+        end
+        PHY_PREAMBLE_s : begin
+            write_enet_mdio <= 1;
+            enet_mdio <= 1'b1; // the premable is all 1s
+            phy_preamble_count <= phy_preamble_count + 1;
+        end
+        SEND_READ_CMD_s : begin
+            write_enet_mdio <= 1;
+            bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
+            enet_mdio <= bits_to_read_phy[13-enet_mdio_bit_count];
+            enet_mdio_bit_count <= enet_mdio_bit_count + 1;
+        end
+        TURNAROUND_z_s : begin
+            write_enet_mdio <= 0; // drive z onto inout
+        end
+        TURNAROUND_0_s : begin
+            write_enet_mdio <= 0; // drive z onto inout
+        end
+        READ_s : begin
+            write_enet_mdio <= 0; // drive z onto inout
+            bits_read_from_phy <= {bits_read_from_phy[14:0], ENET_MDIO};
+            enet_mdio_read_count <= enet_mdio_read_count + 1;
+        end
+        STORE_READ_DATA_s : begin
+            phy_registers_read <= phy_registers_read + 1;
+            case(phy_registers_read)
+                5'd0:  phy_reg_0  <= bits_read_from_phy; // should be 'h1140 I think
+                5'd1:  phy_reg_1  <= bits_read_from_phy;
+                5'd2:  phy_reg_2  <= bits_read_from_phy;
+                5'd3:  phy_reg_3  <= bits_read_from_phy;
+                5'd4:  phy_reg_4  <= bits_read_from_phy;
+                5'd5:  phy_reg_5  <= bits_read_from_phy;
+                5'd6:  phy_reg_6  <= bits_read_from_phy;
+                5'd7:  phy_reg_7  <= bits_read_from_phy;
+                5'd8:  phy_reg_8  <= bits_read_from_phy;
+                5'd9:  phy_reg_9  <= bits_read_from_phy;
+                5'd10: phy_reg_10 <= bits_read_from_phy;
+                5'd11: phy_reg_11 <= bits_read_from_phy;
+                5'd12: phy_reg_12 <= bits_read_from_phy;
+                5'd13: phy_reg_13 <= bits_read_from_phy;
+                5'd14: phy_reg_14 <= bits_read_from_phy;
+                5'd15: phy_reg_15 <= bits_read_from_phy;
+                5'd16: phy_reg_16 <= bits_read_from_phy;
+                5'd17: phy_reg_17 <= bits_read_from_phy;
+                5'd18: phy_reg_18 <= bits_read_from_phy;
+                5'd19: phy_reg_19 <= bits_read_from_phy;
+                5'd20: phy_reg_20 <= bits_read_from_phy;
+                5'd21: phy_reg_21 <= bits_read_from_phy;
+                5'd22: phy_reg_22 <= bits_read_from_phy;
+                5'd23: phy_reg_23 <= bits_read_from_phy;
+                5'd24: phy_reg_24 <= bits_read_from_phy;
+                5'd25: phy_reg_25 <= bits_read_from_phy;
+                5'd26: phy_reg_26 <= bits_read_from_phy;
+                5'd27: phy_reg_27 <= bits_read_from_phy;
+                5'd28: phy_reg_28 <= bits_read_from_phy;
+                5'd29: phy_reg_29 <= bits_read_from_phy;
+                5'd30: phy_reg_30 <= bits_read_from_phy;
+                5'd31: phy_reg_31 <= bits_read_from_phy;
+                // Reg 2 should always be 'h0141 (the OUI), so if reg2 = FFFF there was a problem
+                default: phy_reg_2 <= 32'hFFFF; 
+            endcase
+
+            enet_mdio_bit_count  <= 0;
+            enet_mdio_read_count <= 0;
+            phy_preamble_count   <= 0;
+            turnaround_z_done    <= 0;
+            turnaround_0_ignored <= 0;
+            bits_read_from_phy   <= 0;
+        end
+        PHY_READ_DONE_s : begin
+            reg_LED1 <= 1'b1;
+            phy_read_done <= 1;
+        end
+        // TODO add placeholder states
+        endcase
+    end
 
     reg [3:0] enet_mdio_bit_count;
     reg [4:0] enet_mdio_read_count;
@@ -447,5 +502,5 @@ module  altera_max_10(
     assign  USER_LED[2] = ~reg_LED2;
     assign  USER_LED[3] = ~reg_LED3;
     assign  USER_LED[4] = ~CPU_RESETn;
-	
+    
 endmodule

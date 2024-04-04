@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/Users/robertmadsen/Desktop/altera_max_10/ethernet_packet_analyzer_project/output_files/") File("top.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/output_files/") File("top.sof") MfrSpec(OpMask(1));
 	P ActionCode(Ign)
 		Device PartName(1_BIT_TAP) MfrSpec(OpMask(0));
 	P ActionCode(Ign)
