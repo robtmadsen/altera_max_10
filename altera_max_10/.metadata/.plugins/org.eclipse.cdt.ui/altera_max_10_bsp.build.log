@@ -1,0 +1,6 @@
+10:52:36 **** Build of configuration Nios II for project altera_max_10_bsp ****
+wsl make all 
+[BSP build complete]
+
+10:52:37 Build Finished (took 1s.33ms)
+

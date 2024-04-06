@@ -115,6 +115,7 @@ module  altera_max_10(
             ram_writes_per_phy_addr <= 0;
             phy_regs_written_to_ram <= 0;
         end else begin
+            // doesn't start writing until address 'h4B1C
             if (onchip_memory2_0_s1_address < 13'h1000) begin
                 dummy_wait <= dummy_wait + 1;
 
@@ -381,7 +382,10 @@ module  altera_max_10(
         STORE_READ_DATA_s : begin
             phy_registers_read <= phy_registers_read + 1;
             case(phy_registers_read)
-                5'd0:  phy_reg_0  <= bits_read_from_phy; // should be 'h1140 I think
+                // 'h1140 by default: 0001_0001_0100_0000
+                // For loopback, set 0.14 = 1
+                // -> 0101_0001_0100_0000 = 'h5140
+                5'd0:  phy_reg_0  <= bits_read_from_phy; 
                 5'd1:  phy_reg_1  <= bits_read_from_phy;
                 5'd2:  phy_reg_2  <= bits_read_from_phy;
                 5'd3:  phy_reg_3  <= bits_read_from_phy;

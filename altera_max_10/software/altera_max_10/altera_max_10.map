@@ -1,0 +1,657 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o (alt_load)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o (alt_main)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+                              obj/default/altera_max_10.o (alt_printf)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o) (alt_putchar)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+                              obj/default/altera_max_10.o (alt_putstr)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+                              obj/default/altera_max_10.o (usleep)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o) (altera_avalon_jtag_uart_write)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o) (alt_busy_sleep)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o) (alt_dcache_flush_all)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
+c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o) (memcpy)
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o) (strlen)
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__udivsi3)
+c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+                              c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o) (__mulsi3)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+reset            0x00004000         0x00000020
+onchip_memory    0x00004020         0x00003fe0
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+LOAD obj/default/altera_max_10.o
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libstdc++.a
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a
+START GROUP
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a
+LOAD c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libm.a
+END GROUP
+LOAD c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a
+                0x00004000                        __alt_mem_onchip_memory = 0x4000
+
+.entry          0x00004000       0x20
+ *(.entry)
+ .entry         0x00004000       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+                0x00004000                __reset
+                0x0000400c                _exit
+
+.exceptions     0x00004020        0x0
+                0x00004020                        PROVIDE (__ram_exceptions_start = ABSOLUTE (.))
+                0x00004020                        . = ALIGN (0x20)
+ *(.irq)
+ *(.exceptions.entry.label)
+ *(.exceptions.entry.user)
+ *(.exceptions.entry.ecc_fatal)
+ *(.exceptions.entry)
+ *(.exceptions.irqtest.user)
+ *(.exceptions.irqtest)
+ *(.exceptions.irqhandler.user)
+ *(.exceptions.irqhandler)
+ *(.exceptions.irqreturn.user)
+ *(.exceptions.irqreturn)
+ *(.exceptions.notirq.label)
+ *(.exceptions.notirq.user)
+ *(.exceptions.notirq)
+ *(.exceptions.soft.user)
+ *(.exceptions.soft)
+ *(.exceptions.unknown.user)
+ *(.exceptions.unknown)
+ *(.exceptions.exit.label)
+ *(.exceptions.exit.user)
+ *(.exceptions.exit)
+ *(.exceptions)
+                0x00004020                        PROVIDE (__ram_exceptions_end = ABSOLUTE (.))
+                0x00004020                        PROVIDE (__flash_exceptions_start = LOADADDR (.exceptions))
+
+.text           0x00004020      0x9bc
+                [!provide]                        PROVIDE (stext = ABSOLUTE (.))
+ *(.interp)
+ *(.hash)
+ *(.dynsym)
+ *(.dynstr)
+ *(.gnu.version)
+ *(.gnu.version_d)
+ *(.gnu.version_r)
+ *(.rel.init)
+ *(.rela.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rela.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rela.ctors)
+ *(.rel.dtors)
+ *(.rela.dtors)
+ *(.rel.got)
+ *(.rela.got)
+ *(.rel.sdata .rel.sdata.* .rel.gnu.linkonce.s.*)
+ *(.rela.sdata .rela.sdata.* .rela.gnu.linkonce.s.*)
+ *(.rel.sbss .rel.sbss.* .rel.gnu.linkonce.sb.*)
+ *(.rela.sbss .rela.sbss.* .rela.gnu.linkonce.sb.*)
+ *(.rel.sdata2 .rel.sdata2.* .rel.gnu.linkonce.s2.*)
+ *(.rela.sdata2 .rela.sdata2.* .rela.gnu.linkonce.s2.*)
+ *(.rel.sbss2 .rel.sbss2.* .rel.gnu.linkonce.sb2.*)
+ *(.rela.sbss2 .rela.sbss2.* .rela.gnu.linkonce.sb2.*)
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rel.plt)
+ *(.rela.plt)
+ *(.rel.dyn)
+ *(.init)
+ *(.plt)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x00004020       0x3c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+                0x00004020                _start
+ .text          0x0000405c      0x3c0 obj/default/altera_max_10.o
+                0x0000405c                return_addr
+                0x00004130                print_data
+                0x00004278                readAllMem
+                0x0000433c                readOnboardMem
+                0x000043ec                newValue
+ .text.startup  0x0000441c       0x34 obj/default/altera_max_10.o
+                0x0000441c                main
+ .text          0x00004450       0x84 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+                0x00004450                alt_load
+ .text          0x000044d4       0x2c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+                0x000044d4                alt_main
+ .text          0x00004500      0x144 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+                0x00004500                alt_printf
+ .text          0x00004644       0x48 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+                0x00004644                alt_putchar
+ .text          0x0000468c       0x38 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x0000468c                alt_putstr
+ .text          0x000046c4        0x4 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x000046c4                usleep
+ .text          0x000046c8       0x24 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x000046c8                alt_irq_init
+                0x000046e8                alt_sys_init
+ .text          0x000046ec       0x30 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x000046ec                altera_avalon_jtag_uart_write
+ .text          0x0000471c       0x90 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x0000471c                alt_busy_sleep
+ .text          0x000047ac        0x4 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000047ac                alt_dcache_flush_all
+ .text          0x000047b0        0x4 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x000047b0                alt_icache_flush_all
+ .text          0x000047b4        0x8 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x000047b4                altera_nios2_gen2_irq_init
+ .text          0x000047bc        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .text.memcpy   0x000047bc       0x28 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+                0x000047bc                memcpy
+ .text          0x000047e4        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .text.strlen   0x000047e4       0x1c c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+                0x000047e4                strlen
+ .text          0x00004800      0x1b4 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x00004800                __divsi3
+                0x00004880                __modsi3
+                0x000048f4                __udivsi3
+                0x00004958                __umodsi3
+ .text          0x000049b4       0x28 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x000049b4                __mulsi3
+ *(.gnu.warning.*)
+ *(.fini)
+                [!provide]                        PROVIDE (__etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (_etext = ABSOLUTE (.))
+                [!provide]                        PROVIDE (etext = ABSOLUTE (.))
+ *(.eh_frame_hdr)
+                0x000049dc                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__preinit_array_start = ABSOLUTE (.))
+ *(.preinit_array)
+                [!provide]                        PROVIDE (__preinit_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__init_array_start = ABSOLUTE (.))
+ *(SORT_BY_INIT_PRIORITY(.init_array.*))
+ *(.init_array)
+                [!provide]                        PROVIDE (__init_array_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__fini_array_start = ABSOLUTE (.))
+ *(.fini_array)
+                [!provide]                        PROVIDE (__fini_array_end = ABSOLUTE (.))
+ *(.eh_frame)
+ *(.gcc_except_table .gcc_except_table.*)
+ *(.dynamic)
+                [!provide]                        PROVIDE (__CTOR_LIST__ = ABSOLUTE (.))
+ *(.ctors)
+ *(SORT_BY_NAME(.ctors.*))
+                [!provide]                        PROVIDE (__CTOR_END__ = ABSOLUTE (.))
+                [!provide]                        PROVIDE (__DTOR_LIST__ = ABSOLUTE (.))
+ *(.dtors)
+ *(SORT_BY_NAME(.dtors.*))
+                [!provide]                        PROVIDE (__DTOR_END__ = ABSOLUTE (.))
+ *(.jcr)
+                0x000049dc                        . = ALIGN (0x4)
+
+.rodata         0x000049dc      0x17c
+                0x000049dc                        PROVIDE (__ram_rodata_start = ABSOLUTE (.))
+                0x000049dc                        . = ALIGN (0x4)
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x000049dc      0x17b obj/default/altera_max_10.o
+                                0x187 (size before relaxing)
+ *(.rodata1)
+                0x00004b58                        . = ALIGN (0x4)
+ *fill*         0x00004b57        0x1 
+                0x00004b58                        PROVIDE (__ram_rodata_end = ABSOLUTE (.))
+                0x000049dc                        PROVIDE (__flash_rodata_start = LOADADDR (.rodata))
+
+.rwdata         0x00004b58        0x4 load address 0x00004b5c
+                0x00004b58                        PROVIDE (__ram_rwdata_start = ABSOLUTE (.))
+                0x00004b58                        . = ALIGN (0x4)
+ *(.got.plt)
+ *(.got)
+ *(.data1)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .data          0x00004b58        0x0 obj/default/altera_max_10.o
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00004b58        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .data          0x00004b58        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .data          0x00004b58        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .data          0x00004b58        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x00004b58        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x0000cb58                        _gp = ABSOLUTE ((. + 0x8000))
+                [!provide]                        PROVIDE (gp = _gp)
+ *(.rwdata .rwdata.*)
+ *(.sdata .sdata.* .gnu.linkonce.s.*)
+ .sdata         0x00004b58        0x4 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00004b58                uart
+ *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
+                0x00004b5c                        . = ALIGN (0x4)
+                0x00004b5c                        _edata = ABSOLUTE (.)
+                [!provide]                        PROVIDE (edata = ABSOLUTE (.))
+                0x00004b5c                        PROVIDE (__ram_rwdata_end = ABSOLUTE (.))
+                0x00004b5c                        PROVIDE (__flash_rwdata_start = LOADADDR (.rwdata))
+
+.bss            0x00004b60        0xc
+                0x00004b60                        __bss_start = ABSOLUTE (.)
+                [!provide]                        PROVIDE (__sbss_start = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_start = ABSOLUTE (.))
+ *(.dynsbss)
+ *(.sbss .sbss.* .gnu.linkonce.sb.*)
+ .sbss          0x00004b60        0xc c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+                0x00004b60                alt_envp
+                0x00004b64                alt_argv
+                0x00004b68                alt_argc
+ *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
+ *(.scommon)
+                [!provide]                        PROVIDE (__sbss_end = ABSOLUTE (.))
+                [!provide]                        PROVIDE (___sbss_end = ABSOLUTE (.))
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .bss           0x00004b6c        0x0 obj/default/altera_max_10.o
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00004b6c        0x0 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x00004b6c        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .bss           0x00004b6c        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .bss           0x00004b6c        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x00004b6c        0x0 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+ *(COMMON)
+                0x00004b6c                        . = ALIGN (0x4)
+                0x00004b6c                        __bss_end = ABSOLUTE (.)
+
+.onchip_memory  0x00004b6c        0x0
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_start = ABSOLUTE (.))
+ *(.onchip_memory .onchip_memory. onchip_memory.*)
+                0x00004b6c                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_end = ABSOLUTE (.))
+                0x00004b6c                        _end = ABSOLUTE (.)
+                0x00004b6c                        end = ABSOLUTE (.)
+                0x00004b6c                        __alt_stack_base = ABSOLUTE (.)
+                [!provide]                        PROVIDE (_alt_partition_onchip_memory_load_addr = LOADADDR (.onchip_memory))
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x2d
+ *(.comment)
+ .comment       0x00000000       0x2d obj/default/altera_max_10.o
+                                 0x2e (size before relaxing)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .comment       0x0000002d       0x2e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .comment       0x0000002d       0x2e c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .comment       0x0000002d       0x2e c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .comment       0x0000002d       0x2e c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .comment       0x0000002d       0x2e c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x250
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .debug_aranges
+                0x00000028       0x28 obj/default/altera_max_10.o
+ .debug_aranges
+                0x00000050       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_aranges
+                0x00000070       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_aranges
+                0x00000090       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_aranges
+                0x000000b0       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_aranges
+                0x000000d0       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_aranges
+                0x000000f0       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_aranges
+                0x00000110       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_aranges
+                0x00000130       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_aranges
+                0x00000150       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_aranges
+                0x00000170       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_aranges
+                0x00000190       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x000001b0       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_aranges
+                0x000001d0       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_aranges
+                0x000001f0       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_aranges
+                0x00000210       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_aranges
+                0x00000230       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x1811
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x3f c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .debug_info    0x0000003f      0x44d obj/default/altera_max_10.o
+ .debug_info    0x0000048c      0x239 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x000006c5      0x13e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x00000803      0x17e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_info    0x00000981      0x130 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_info    0x00000ab1      0x15c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_info    0x00000c0d       0xe4 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x00000cf1      0x127 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000e18      0x149 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x00000f61      0x10c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x0000106d       0x8d c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000010fa       0x8d c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x00001187       0x8d c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x00001214      0x121 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_info    0x00001335       0xd1 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_info    0x00001406      0x347 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x0000174d       0xc4 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_abbrev   0x00000000      0xd68
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x1f c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .debug_abbrev  0x0000001f      0x1af obj/default/altera_max_10.o
+ .debug_abbrev  0x000001ce      0x12c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x000002fa       0xeb c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x000003e5      0x10d c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_abbrev  0x000004f2       0xca c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_abbrev  0x000005bc       0xd3 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_abbrev  0x0000068f       0x9b c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x0000072a      0x107 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000831       0xdc c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000090d       0xb9 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x000009c6       0x43 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000a09       0x43 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000a4c       0x43 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x00000a8f       0xc1 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_abbrev  0x00000b50       0x8c c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_abbrev  0x00000bdc      0x10c c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x00000ce8       0x80 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_line     0x00000000      0xf3d
+ *(.debug_line)
+ .debug_line    0x00000000       0x66 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .debug_line    0x00000066      0x31d obj/default/altera_max_10.o
+ .debug_line    0x00000383       0xd2 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000455       0xa2 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000004f7      0x177 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_line    0x0000066e       0x82 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_line    0x000006f0       0x79 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_line    0x00000769       0x70 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x000007d9       0x8e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x00000867       0x93 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x000008fa       0xe2 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x000009dc       0x4e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000a2a       0x4c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000a76       0x54 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x00000aca       0x8c c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_line    0x00000b56       0x7c c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_line    0x00000bd2      0x2e3 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000eb5       0x88 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_frame    0x00000000      0x3cc
+ *(.debug_frame)
+ .debug_frame   0x00000000      0x110 obj/default/altera_max_10.o
+ .debug_frame   0x00000110       0x2c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000013c       0x2c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000168       0x44 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_frame   0x000001ac       0x30 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_frame   0x000001dc       0x30 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_frame   0x0000020c       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x0000022c       0x3c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x00000268       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x00000288       0x34 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x000002bc       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x000002dc       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x000002fc       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000031c       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_frame   0x0000033c       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_frame   0x0000035c       0x50 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x000003ac       0x20 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_str      0x00000000      0x5d4
+ *(.debug_str)
+ .debug_str     0x00000000       0x7b c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+                                 0x82 (size before relaxing)
+ .debug_str     0x0000007b      0x170 obj/default/altera_max_10.o
+                                0x1b8 (size before relaxing)
+ .debug_str     0x000001eb      0x119 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+                                0x208 (size before relaxing)
+ .debug_str     0x00000304       0x4b c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+                                0x138 (size before relaxing)
+ .debug_str     0x0000034f       0x44 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+                                 0xc1 (size before relaxing)
+ .debug_str     0x00000393       0x43 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+                                0x137 (size before relaxing)
+ .debug_str     0x000003d6        0x7 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+                                0x144 (size before relaxing)
+ .debug_str     0x000003dd       0x1c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+                                0x116 (size before relaxing)
+ .debug_str     0x000003f9       0x5c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                0x183 (size before relaxing)
+ .debug_str     0x00000455        0x6 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x15c (size before relaxing)
+ .debug_str     0x0000045b       0x2d c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                                0x12c (size before relaxing)
+ .debug_str     0x00000488       0xfd c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x00000488       0xfd c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x00000488      0x103 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x00000488       0x7f c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+                                0x122 (size before relaxing)
+ .debug_str     0x00000507       0x7f c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+                                0x114 (size before relaxing)
+ .debug_str     0x00000507       0xcd c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                0x122 (size before relaxing)
+ .debug_str     0x000005d4       0xe6 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_alt_sim_info
+                0x00000000       0x40
+ *(.debug_alt_sim_info)
+ .debug_alt_sim_info
+                0x00000000       0x10 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+ .debug_alt_sim_info
+                0x00000010       0x30 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x00008000                        __alt_data_end = 0x8000
+                0x00008000                        PROVIDE (__alt_stack_pointer = __alt_data_end)
+                [!provide]                        PROVIDE (__alt_stack_limit = __alt_stack_base)
+                [!provide]                        PROVIDE (__alt_heap_start = end)
+                [!provide]                        PROVIDE (__alt_heap_limit = 0x8000)
+OUTPUT(altera_max_10.elf elf32-littlenios2)
+LOAD linker stubs
+
+.debug_ranges   0x00000000       0x20
+ .debug_ranges  0x00000000       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp//obj/HAL/src/crt0.o
+
+.debug_loclists
+                0x00000000      0x9b5
+ .debug_loclists
+                0x00000000      0x1ed obj/default/altera_max_10.o
+ .debug_loclists
+                0x000001ed      0x180 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_loclists
+                0x0000036d       0x25 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+ .debug_loclists
+                0x00000392       0x2c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+ .debug_loclists
+                0x000003be       0x1e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_loclists
+                0x000003dc       0x1e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loclists
+                0x000003fa       0x5e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loclists
+                0x00000458       0x8a c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loclists
+                0x000004e2       0xcc c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_loclists
+                0x000005ae       0x32 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_loclists
+                0x000005e0      0x37a c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loclists
+                0x0000095a       0x5b c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+
+.debug_rnglists
+                0x00000000       0xfa
+ .debug_rnglists
+                0x00000000       0x5b obj/default/altera_max_10.o
+ .debug_rnglists
+                0x0000005b       0x23 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_rnglists
+                0x0000007e       0x17 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+ .debug_rnglists
+                0x00000095       0x13 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+ .debug_rnglists
+                0x000000a8       0x13 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+ .debug_rnglists
+                0x000000bb       0x3f c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+
+.debug_line_str
+                0x00000000      0x7c8
+ .debug_line_str
+                0x00000000      0x19d obj/default/altera_max_10.o
+                                0x20e (size before relaxing)
+ .debug_line_str
+                0x0000019d       0xaa c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_load.o)
+                                0x121 (size before relaxing)
+ .debug_line_str
+                0x00000247       0x4a c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_main.o)
+                                0x120 (size before relaxing)
+ .debug_line_str
+                0x00000291       0x1e c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_printf.o)
+                                0x161 (size before relaxing)
+ .debug_line_str
+                0x000002af       0x16 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putchar.o)
+                                 0xe4 (size before relaxing)
+ .debug_line_str
+                0x000002c5       0x6c c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_putstr.o)
+                                0x19e (size before relaxing)
+ .debug_line_str
+                0x00000331       0x81 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_usleep.o)
+                                0x16d (size before relaxing)
+ .debug_line_str
+                0x000003b2       0x4f c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_sys_init.o)
+                                0x139 (size before relaxing)
+ .debug_line_str
+                0x00000401       0x38 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                                0x160 (size before relaxing)
+ .debug_line_str
+                0x00000439       0x19 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                                0x103 (size before relaxing)
+ .debug_line_str
+                0x00000452       0x1f c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                                 0xff (size before relaxing)
+ .debug_line_str
+                0x00000471       0x1f c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                                 0xff (size before relaxing)
+ .debug_line_str
+                0x00000490       0x20 c:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                                0x102 (size before relaxing)
+ .debug_line_str
+                0x000004b0      0x1b3 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-memcpy.o)
+                                0x259 (size before relaxing)
+ .debug_line_str
+                0x00000663       0x39 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(libc_a-strlen.o)
+                                0x259 (size before relaxing)
+ .debug_line_str
+                0x0000069c       0xf2 c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                                0x187 (size before relaxing)
+ .debug_line_str
+                0x0000078e       0x3a c:/intelfpga_lite/23.1std/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/12.3.1/mno-hw-mul\libgcc.a(lib2-mul.o)
+                                0x17e (size before relaxing)
