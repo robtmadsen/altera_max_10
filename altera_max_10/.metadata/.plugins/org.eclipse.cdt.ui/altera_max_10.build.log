@@ -1,9 +1,9 @@
-10:52:45 **** Incremental Build of configuration Nios II for project altera_max_10 ****
+17:51:31 **** Incremental Build of configuration Nios II for project altera_max_10 ****
 wsl make all 
 Info: Building /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
 make --no-print-directory -C /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
 [BSP build complete]
 [altera_max_10 build complete]
 
-10:52:46 Build Finished (took 1s.496ms)
+17:51:38 Build Finished (took 7s.338ms)
 

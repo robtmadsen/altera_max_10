@@ -525,3 +525,283 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 
 !ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 10:52:49.546
 !MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+!SESSION 2024-04-06 11:03:51.434 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_392
+java.vendor=Temurin
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-04-06 11:04:09.240
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:04:28.053
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:04:29.601
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:04:29.937
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:36:43.656
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:36:45.373
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:36:45.699
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:37:01.469
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:37:03.047
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:37:03.380
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:42:30.660
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:42:32.337
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:42:32.657
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:47:16.054
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:47:17.620
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:47:17.939
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:57:46.231
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 11:57:47.849
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 11:57:48.147
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:02:48.189
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:02:49.979
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:02:50.312
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:04:04.982
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:04:06.598
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:04:06.930
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:04:58.375
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:05:00.106
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:05:00.424
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:10:51.235
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:10:52.792
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:10:53.042
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:12:36.687
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:12:38.422
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:12:38.752
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:13:50.168
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:13:51.903
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:13:52.220
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:21:33.840
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:21:35.384
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:21:35.642
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:26:43.915
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:26:45.513
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:26:45.847
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:36:31.520
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:36:33.178
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:36:33.502
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:37:34.811
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:37:36.565
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:37:36.897
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:38:54.724
+!MESSAGE Terminated Launch with connection: 10USB-BlasterII on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:38:55.352
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 12:38:57.061
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 12:38:57.392
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+!SESSION 2024-04-06 13:54:58.424 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_392
+java.vendor=Temurin
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization C:/intelfpga_lite/23.1std/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-04-06 13:55:17.675
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:55:27.298
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 13:55:28.811
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:55:29.144
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:55:57.532
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 13:55:59.073
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:55:59.400
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:58:41.701
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 13:58:43.251
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 13:58:43.593
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:01:08.682
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 14:01:10.249
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:01:10.571
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:10:32.374
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 14:10:33.990
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:10:34.313
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:23:04.299
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 14:23:05.782
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 14:23:06.099
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 17:04:22.903
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 17:04:25.166
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 17:04:25.189
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 17:51:39.065
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-04-06 17:51:40.582
+!MESSAGE Failed Executing: [wsl nios2-download, '--cable=USB-BlasterII on localhost [USB-1]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-04-06 17:51:40.589
+!MESSAGE Executing: [C:\WINDOWS\system32\cmd.exe, /C, wsl nios2-download '--cable=USB-BlasterII on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10/altera_max_10.elf]

@@ -107,6 +107,7 @@ void readAllMem(){
   int ethernet_line;
   int eth_offset = 0;
   int print_count = 0;
+  int between_delimiters = 1;
   
   eth_offset = 0;
   print_count = 0;
@@ -116,11 +117,12 @@ void readAllMem(){
     if (ethernet_line != 0) {
       // look for the delimiter
       //if (ethernet_line == 0xAAAAAAAA) {
-      if (ethernet_line == 0xA0702001) {
-        alt_printf("\nFound the delimiter!\n");
-      }
-      print_data(ONCHIP_MEMORY_BASE+eth_offset, ethernet_line);
-      print_count++;
+      //  alt_printf("\nFound the delimiter, going to start printing!\n");
+      //  between_delimiters = (between_delimiters == 1) ? 0 : 1;
+      //} else if (between_delimiters == 1) { 
+        print_data(ONCHIP_MEMORY_BASE+eth_offset, ethernet_line);
+        print_count++;
+      //}
     }
     if (print_count == 8) {
       alt_printf("\n");

@@ -96,10 +96,14 @@ module  altera_max_10(
     
     reg [6:0] ram_writes_per_phy_addr;
     reg [5:0] phy_regs_written_to_ram;
+
+    localparam RAM_DELIMITER = 32'hAAAAAAAA;
     
-    reg[18:0] dummy_wait;
+    reg[17:0] dummy_wait;
+    reg       add_delimiter;
     initial begin
         dummy_wait = 0;
+        //add_delimiter = 1;
     end
     initial begin
         onchip_memory2_0_s1_writedata = 0;
@@ -107,75 +111,102 @@ module  altera_max_10(
     end
     always @ (posedge ENETA_RX_CLK) begin
         if (CPU_RESETn == 0) begin
-            onchip_memory2_0_s1_address <= 0;
+            //onchip_memory2_0_s1_address <= 0;
+            onchip_memory2_0_s1_address <= 'h400; // for some reason the bottom 'd700 odd addresses aren't being written
             onchip_memory2_0_s1_write <= 0;
             onchip_memory2_0_s1_chipselect <= 0;
             reg_LED0 <= 1'b0;
             onchip_memory2_0_s1_writedata <= {32'hBEEFBEEF};
             ram_writes_per_phy_addr <= 0;
             phy_regs_written_to_ram <= 0;
+            phy_reg_write_done <= 1'b0;
+            add_delimiter <= 1'b1;
         end else begin
-            // doesn't start writing until address 'h4B1C
+            // doesn't start writing until address 'h4B1C (or thereabouts)
             if (onchip_memory2_0_s1_address < 13'h1000) begin
                 dummy_wait <= dummy_wait + 1;
 
-                if (phy_read_done == 0) begin
+                // this bit is driven by the FSM that's reading/writing the PHY
+                if (write_phy_reg_space_to_ram == 0) begin
                 // do nothing until the entire PHY register space has been read
+                    
+                    phy_reg_write_done <= 1'b0;
+                    phy_regs_written_to_ram <= 0;
                 end else if (phy_regs_written_to_ram < 'd32) begin
+                    // the update cycle
                     if (dummy_wait == 0) begin
                         onchip_memory2_0_s1_address <= onchip_memory2_0_s1_address + 1;
-                        ram_writes_per_phy_addr <= ram_writes_per_phy_addr + 1;
-                        if (ram_writes_per_phy_addr > 'd8) begin
-                            phy_regs_written_to_ram <= phy_regs_written_to_ram + 1;
-                            ram_writes_per_phy_addr <= 0;
-                        end
+                        // delimiters don't increase these counters
+                        //if (add_delimiter == 1'b0) begin
+                            ram_writes_per_phy_addr <= ram_writes_per_phy_addr + 1;
+                            if (ram_writes_per_phy_addr == 'd7) begin
+                                phy_regs_written_to_ram <= phy_regs_written_to_ram + 1;
+                                ram_writes_per_phy_addr <= 0;
+                                add_delimiter <= 1; // reprint the delimiter next time we're at reg 0
+                            end
+                        //end
                         case(phy_regs_written_to_ram)
-                        5'd0:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_0};
-                        5'd1:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_1};
-                        5'd2:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_2};
-                        5'd3:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_3};
-                        5'd4:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_4};
-                        5'd5:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_5};
-                        5'd6:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_6};
-                        5'd7:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_7};
-                        5'd8:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_8};
-                        5'd9:  onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_9};
-                        5'd10: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_10};
-                        5'd11: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_11};
-                        5'd12: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_12};
-                        5'd13: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_13};
-                        5'd14: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_14};
-                        5'd15: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_15};
-                        5'd16: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_16};
-                        5'd17: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_17};
-                        5'd18: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_18};
-                        5'd19: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_19};
-                        5'd20: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_20};
-                        5'd21: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_21};
-                        5'd22: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_22};
-                        5'd23: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_23};
-                        5'd24: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_24};
-                        5'd25: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_25};
-                        5'd26: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_26};
-                        5'd27: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_27};
-                        5'd28: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_28};
-                        5'd29: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_29};
-                        5'd30: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_30};
-                        5'd31: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_31};
+                        5'd0:  begin
+                            if (add_delimiter) begin
+                                onchip_memory2_0_s1_writedata <= RAM_DELIMITER;
+                                add_delimiter <= 0; // print the actual data next time
+                            end else begin
+                                onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_0};
+                            end
+                        end
+                        5'd1:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_1};
+                        5'd2:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_2};
+                        5'd3:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_3};
+                        5'd4:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_4};
+                        5'd5:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_5};
+                        5'd6:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_6};
+                        5'd7:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_7};
+                        5'd8:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_8};
+                        5'd9:  onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_9};
+                        5'd10: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_10};
+                        5'd11: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_11};
+                        5'd12: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_12};
+                        5'd13: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_13};
+                        5'd14: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_14};
+                        5'd15: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_15};
+                        5'd16: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_16};
+                        5'd17: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_17};
+                        5'd18: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_18};
+                        5'd19: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_19};
+                        5'd20: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_20};
+                        5'd21: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_21};
+                        5'd22: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_22};
+                        5'd23: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_23};
+                        5'd24: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_24};
+                        5'd25: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_25};
+                        5'd26: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_26};
+                        5'd27: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_27};
+                        5'd28: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_28};
+                        5'd29: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_29};
+                        5'd30: onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_30};
+                        5'd31: begin
+                            if (ram_writes_per_phy_addr == 'd7) begin
+                                onchip_memory2_0_s1_writedata <= RAM_DELIMITER;
+                                //add_delimiter <= 0; // print the actual data next time
+                            end else begin
+                                onchip_memory2_0_s1_writedata <= {4'hB, 3'b000, phy_regs_written_to_ram[4:0], 4'h0, phy_reg_31};
+                            end
+                        end
                         // Reg 2 should always be 'h0141 (the OUI), so if reg2 = FFFF there was a problem
                         default: onchip_memory2_0_s1_writedata <= {4'hA, 3'b000, 5'h2, 4'h0, 16'hFFFF};
                         endcase
-                        end else if ((dummy_wait > 0) && (dummy_wait <= 5)) begin
-                            onchip_memory2_0_s1_write <= 1;
-                            onchip_memory2_0_s1_chipselect <= 1;
-                        end else if ((dummy_wait >= 6) || (dummy_wait < 0)) begin
-                            onchip_memory2_0_s1_write <= 0;
-                            onchip_memory2_0_s1_chipselect <= 0;
-                        end 
+                    end else if ((dummy_wait > 0) && (dummy_wait <= 5)) begin
+                        onchip_memory2_0_s1_write <= 1;
+                        onchip_memory2_0_s1_chipselect <= 1;
+                    end else if ((dummy_wait >= 6) || (dummy_wait < 0)) begin
+                        onchip_memory2_0_s1_write <= 0;
+                        onchip_memory2_0_s1_chipselect <= 0;
+                    end 
 
                 // all the PHY registers have been read and saved to RAM, just rewrite them
                 end else if (phy_regs_written_to_ram >= 32) begin
-                    phy_regs_written_to_ram <= 0;
+                    //phy_regs_written_to_ram <= 0;
+                    phy_reg_write_done <= 1'b1;
                 end
             // wrote all the addresses, turn on the LED
             end else begin
@@ -202,12 +233,37 @@ module  altera_max_10(
     // to 10 kohm
     assign ENET_MDIO = (write_enet_mdio) ? enet_mdio : 'bz;
     
+    // See Marvell 88E1111 Datasheet page 81
     parameter [3:0] PHY_READ  = 4'b0110;
     parameter [3:0] PHY_WRITE = 4'b0101;
     parameter [4:0] PHY_ADDR =  5'b0;
+    parameter [1:0] PHY_WR_TURNAROUND = 2'b10;
+    //parameter [15:0] REG0_LOOPBACK = 16'h5140; //Default is 'h1140 -> flip 14th bit. 0101_0001_0100_0000
+
+
+    parameter [15:0] REG0_LOOPBACK = 16'hA280; //DELETE THIS, just for testing
+
+/*
+    'h5140 -> 'h2880
+    'h5141 -> 'h2880 in sim, same as with 'h5140 ...
+    'h5143 -> also leads to 'h2880 in sim
+    'h5147 -> also leads to 'h2880 in sim ... 
+    'hD147 -> leads to 'h6880
+
+    'h5140: 0101_0001_0100_0000 --> 0010_1000_1000_0000
+    'hD147: 1101_0001_0100_0111 --> 0110_1000_1000_0000
+    (new 15th bit mapped to 14th bit. )
+
+    hack: use this (and every bit will be one pos lower?)  1010_00010_1000_0000 = 'hA280
+
+
+*/
+
     
     reg [31:0] phy_wait_after_reset_count;
-    reg [13:0] bits_to_read_phy; //0110 -> READ, phy addr 00000, reg addr 00000 
+    reg [13:0] serial_rd_cmd_to_phy; //0110 -> READ, phy addr 00000, reg addr 00000 
+    reg [15:0] serial_wr_cmd_to_phy; //0101 -> WRITE, phy addr 00000, reg addr 00000, turnaround 10 
+    reg [15:0] serial_wr_data_to_phy;
     reg [15:0] bits_read_from_phy;
     reg [15:0] phy_reg_0;
     reg [15:0] phy_reg_1;
@@ -243,7 +299,10 @@ module  altera_max_10(
     reg [15:0] phy_reg_31;
     reg [5:0]  phy_registers_read;
     reg [5:0]  phy_preamble_count;
-    reg        phy_read_done;
+    reg        write_phy_reg_space_to_ram;
+    reg        set_reg0_to_loopback;
+    reg        reg0_in_loopback;
+    reg        phy_reg_write_done;
     reg        turnaround_z_done;
     reg        turnaround_0_ignored;
 
@@ -255,7 +314,10 @@ module  altera_max_10(
                 TURNAROUND_0_s    = 4'h5,
                 READ_s            = 4'h6,
                 STORE_READ_DATA_s = 4'h7,
-                PHY_READ_DONE_s   = 4'h8;
+                WAIT_FOR_RAM_WRITE_s   = 4'h8,
+                ENABLE_LOOPBACK_s = 4'h9,
+                SEND_WRITE_CMD_s = 4'hA,
+                SEND_WRITE_DATA_s = 4'hB;
                 // TODO add placeholder states for the rest of the bits
     reg [3:0]   current_state, next_state;
 
@@ -281,10 +343,20 @@ module  altera_max_10(
                     if (phy_wait_after_reset_count == 'd125000000) next_state = PHY_PREAMBLE_s;
                 end
                 PHY_PREAMBLE_s : begin
-                    if (phy_preamble_count == 'd32 /*31?*/) next_state = SEND_READ_CMD_s;
+                    if (phy_preamble_count == 'd32) begin
+                        if (set_reg0_to_loopback) next_state = SEND_WRITE_CMD_s;
+                        else                      next_state = SEND_READ_CMD_s;
+                    end
                 end
                 SEND_READ_CMD_s : begin
-                    if (enet_mdio_bit_count == 'd14 /*?*/) next_state = TURNAROUND_z_s;
+                    if (enet_mdio_bit_count == 'd14) next_state = TURNAROUND_z_s;
+                end
+                SEND_WRITE_CMD_s : begin
+                    // 2 more bits because contains 2-bit turnaround
+                    if (enet_mdio_wr_cmd_count == 'd16 /*4/6/24 registers unwritable unless 'd16*/) next_state = SEND_WRITE_DATA_s;
+                end
+                SEND_WRITE_DATA_s : begin
+                    if (enet_mdio_write_count == 'd15) next_state = PHY_PREAMBLE_s; // but with set_reg0_to_loopback deasserted
                 end
                 TURNAROUND_z_s : begin
                     next_state = TURNAROUND_0_s;
@@ -296,10 +368,14 @@ module  altera_max_10(
                     if (enet_mdio_read_count == 'd15 /*?*/) next_state = STORE_READ_DATA_s;
                 end
                 STORE_READ_DATA_s : begin
-                    if (phy_registers_read == 'd31 /*?*/) next_state = PHY_READ_DONE_s;
+                    if (phy_registers_read == 'd31 /*?*/) next_state = WAIT_FOR_RAM_WRITE_s;
                     else next_state = PHY_PREAMBLE_s; 
                 end
-                PHY_READ_DONE_s : begin
+                WAIT_FOR_RAM_WRITE_s : begin
+                    if ((phy_reg_write_done == 1'd1) && (reg0_in_loopback == 1'b0)) next_state = ENABLE_LOOPBACK_s;
+                end
+                ENABLE_LOOPBACK_s : begin
+                    next_state = PHY_PREAMBLE_s; // with set_reg0_to_loopback asserted
                 end
                 // TODO add placeholder states
             endcase
@@ -312,8 +388,12 @@ module  altera_max_10(
             write_enet_mdio <= 0; // drive z onto inout
             enet_mdio_bit_count <= 0;
             enet_mdio_read_count <= 0;
+            enet_mdio_write_count <= 0;
+            enet_mdio_wr_cmd_count <= 0;
             phy_wait_after_reset_count <= 0;
-            phy_read_done <= 0;
+            write_phy_reg_space_to_ram <= 0;
+            set_reg0_to_loopback <= 0;
+            reg0_in_loopback <= 0;
             bits_read_from_phy <= 0;
             phy_preamble_count <= 0;
             turnaround_z_done  <= 0;
@@ -351,7 +431,9 @@ module  altera_max_10(
             phy_reg_30 <= 0;
             phy_reg_31 <= 0;
             phy_registers_read <= 0;
-            bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
+            serial_rd_cmd_to_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
+            serial_wr_cmd_to_phy <= {PHY_WRITE, PHY_ADDR, 5'b0_0000, PHY_WR_TURNAROUND};
+            serial_wr_data_to_phy <= {REG0_LOOPBACK};
             reg_LED1 <= 1'b0;
         end
         POST_RST_WAIT_s: begin
@@ -361,12 +443,28 @@ module  altera_max_10(
             write_enet_mdio <= 1;
             enet_mdio <= 1'b1; // the premable is all 1s
             phy_preamble_count <= phy_preamble_count + 1;
+            enet_mdio_write_count <= 0;
+            enet_mdio_wr_cmd_count <= 0; // probably redundant
         end
         SEND_READ_CMD_s : begin
             write_enet_mdio <= 1;
-            bits_to_read_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
-            enet_mdio <= bits_to_read_phy[13-enet_mdio_bit_count];
+            serial_rd_cmd_to_phy <= {PHY_READ, PHY_ADDR, phy_registers_read[4:0]};
+            enet_mdio <= serial_rd_cmd_to_phy[13-enet_mdio_bit_count];
             enet_mdio_bit_count <= enet_mdio_bit_count + 1;
+        end
+        SEND_WRITE_CMD_s : begin
+            write_enet_mdio <= 1;
+            serial_wr_cmd_to_phy <= {PHY_WRITE, PHY_ADDR, 5'b0_0000, PHY_WR_TURNAROUND}; // temporarily (?) hardcoded to Register 0
+            enet_mdio <= serial_wr_cmd_to_phy[15-enet_mdio_wr_cmd_count];
+            enet_mdio_wr_cmd_count <= enet_mdio_wr_cmd_count + 1;
+        end
+        SEND_WRITE_DATA_s : begin
+            serial_wr_data_to_phy <= {REG0_LOOPBACK}; // redundant?
+            set_reg0_to_loopback <= 0; // deassert this so that when done writing to the PHY, the READ flow starts again
+            reg0_in_loopback <= 1; // it will be (ideally) once out of this state. A flag preventing the FSM from continually writing Reg0
+            write_enet_mdio <= 1;
+            enet_mdio <= serial_wr_data_to_phy[15-enet_mdio_write_count];
+            enet_mdio_write_count <= enet_mdio_write_count + 1;
         end
         TURNAROUND_z_s : begin
             write_enet_mdio <= 0; // drive z onto inout
@@ -428,16 +526,25 @@ module  altera_max_10(
             turnaround_0_ignored <= 0;
             bits_read_from_phy   <= 0;
         end
-        PHY_READ_DONE_s : begin
+        WAIT_FOR_RAM_WRITE_s : begin
             reg_LED1 <= 1'b1;
-            phy_read_done <= 1;
+            write_phy_reg_space_to_ram <= 1;
+            phy_registers_read <= 0;
+        end
+        ENABLE_LOOPBACK_s : begin
+            reg_LED1 <= 1'b0;
+            write_phy_reg_space_to_ram <= 0; // stop writing to RAM
+            set_reg0_to_loopback <= 1;
+            enet_mdio_bit_count  <= 0; // probably redundant
         end
         // TODO add placeholder states
         endcase
     end
 
-    reg [3:0] enet_mdio_bit_count;
+    reg [4:0] enet_mdio_bit_count;
     reg [4:0] enet_mdio_read_count;
+    reg [4:0] enet_mdio_write_count;
+    reg [4:0] enet_mdio_wr_cmd_count;
     reg       enet_mdc_clk;
     reg	      enet_mdio;
     reg       write_enet_mdio;
@@ -447,6 +554,8 @@ module  altera_max_10(
         enet_mdio = 0;
         enet_mdio_bit_count = 0;
         enet_mdio_read_count = 0;
+        enet_mdio_write_count = 0;
+        enet_mdio_wr_cmd_count = 0;
         bits_read_from_phy = 0;
         phy_registers_read = 0;
     end

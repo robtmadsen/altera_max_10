@@ -1,12 +1,15 @@
 
 State Machine - |altera_max_10|current_state
-Name current_state.STORE_READ_DATA_s current_state.READ_s current_state.TURNAROUND_0_s current_state.TURNAROUND_z_s current_state.SEND_READ_CMD_s current_state.PHY_PREAMBLE_s current_state.POST_RST_WAIT_s current_state.RESET_s current_state.PHY_READ_DONE_s 
-current_state.RESET_s 0 0 0 0 0 0 0 0 0 
-current_state.POST_RST_WAIT_s 0 0 0 0 0 0 1 1 0 
-current_state.PHY_PREAMBLE_s 0 0 0 0 0 1 0 1 0 
-current_state.SEND_READ_CMD_s 0 0 0 0 1 0 0 1 0 
-current_state.TURNAROUND_z_s 0 0 0 1 0 0 0 1 0 
-current_state.TURNAROUND_0_s 0 0 1 0 0 0 0 1 0 
-current_state.READ_s 0 1 0 0 0 0 0 1 0 
-current_state.STORE_READ_DATA_s 1 0 0 0 0 0 0 1 0 
-current_state.PHY_READ_DONE_s 0 0 0 0 0 0 0 1 1 
+Name current_state.SEND_WRITE_DATA_s current_state.SEND_WRITE_CMD_s current_state.ENABLE_LOOPBACK_s current_state.WAIT_FOR_RAM_WRITE_s current_state.STORE_READ_DATA_s current_state.READ_s current_state.TURNAROUND_0_s current_state.TURNAROUND_z_s current_state.SEND_READ_CMD_s current_state.PHY_PREAMBLE_s current_state.POST_RST_WAIT_s current_state.RESET_s 
+current_state.RESET_s 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.POST_RST_WAIT_s 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.PHY_PREAMBLE_s 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.SEND_READ_CMD_s 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.TURNAROUND_z_s 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.TURNAROUND_0_s 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.READ_s 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.STORE_READ_DATA_s 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.WAIT_FOR_RAM_WRITE_s 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.ENABLE_LOOPBACK_s 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.SEND_WRITE_CMD_s 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.SEND_WRITE_DATA_s 1 0 0 0 0 0 0 0 0 0 0 1 
