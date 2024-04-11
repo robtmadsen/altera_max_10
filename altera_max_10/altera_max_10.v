@@ -61,6 +61,7 @@ module  altera_max_10(
 
     reg [7:0] ethA_stream;
 
+	`ifndef COCOTB_SIM // no need to include the nios II/e core
     nios_setup nios (
         .clk_clk(CLK_50_MAX10),
         .led_external_connection_export(2'b0),
@@ -76,6 +77,7 @@ module  altera_max_10(
         .reset_reset_n(CPU_RESETn),
         .switch_external_connection_export(ethA_stream)//? Don't care? 
     );
+	`endif
 
     //address: specifies a word offset into the slave address space
     reg [12:0] onchip_memory2_0_s1_address;
