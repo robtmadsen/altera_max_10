@@ -25,7 +25,7 @@ module  altera_max_10(
     input  [3:0]    USER_PB,         //1.5v 
 
     output       ENETA_GTX_CLK,
-    input        ENETA_TX_CLK,
+    input        ENETA_TX_CLK, // drive data to PHY on this clk I think
     output [3:0] ENETA_TX_D,
     output       ENETA_TX_EN,
     output       ENETA_TX_ER,
@@ -307,19 +307,21 @@ module  altera_max_10(
     reg        phy_reg_write_done;
     reg        turnaround_z_done;
     reg        turnaround_0_ignored;
+    reg        start_loopback_traffic;
 
-    localparam  RESET_s           = 4'h0,
-                POST_RST_WAIT_s   = 4'h1,
-                PHY_PREAMBLE_s    = 4'h2,
-                SEND_READ_CMD_s   = 4'h3,
-                TURNAROUND_z_s    = 4'h4,
-                TURNAROUND_0_s    = 4'h5,
-                READ_s            = 4'h6,
-                STORE_READ_DATA_s = 4'h7,
-                WAIT_FOR_RAM_WRITE_s   = 4'h8,
-                ENABLE_LOOPBACK_s = 4'h9,
-                SEND_WRITE_CMD_s = 4'hA,
-                SEND_WRITE_DATA_s = 4'hB;
+    // FSM to read PHY reg space, and set PHY to loopback mode
+    localparam  RESET_s              = 4'h0,
+                POST_RST_WAIT_s      = 4'h1,
+                PHY_PREAMBLE_s       = 4'h2,
+                SEND_READ_CMD_s      = 4'h3,
+                TURNAROUND_z_s       = 4'h4,
+                TURNAROUND_0_s       = 4'h5,
+                READ_s               = 4'h6,
+                STORE_READ_DATA_s    = 4'h7,
+                WAIT_FOR_RAM_WRITE_s = 4'h8,
+                ENABLE_LOOPBACK_s    = 4'h9,
+                SEND_WRITE_CMD_s     = 4'hA,
+                SEND_WRITE_DATA_s    = 4'hB;
                 // TODO add placeholder states for the rest of the bits
     reg [3:0]   current_state, next_state;
 
@@ -400,6 +402,7 @@ module  altera_max_10(
             phy_preamble_count <= 0;
             turnaround_z_done  <= 0;
             turnaround_0_ignored <= 0;
+            start_loopback_traffic <= 0;
             phy_reg_0  <= 0;
             phy_reg_1  <= 0;
             phy_reg_2  <= 0;
@@ -532,6 +535,9 @@ module  altera_max_10(
             reg_LED1 <= 1'b1;
             write_phy_reg_space_to_ram <= 1;
             phy_registers_read <= 0;
+            if (reg0_in_loopback == 1) begin
+                start_loopback_traffic <= 1;
+            end
         end
         ENABLE_LOOPBACK_s : begin
             reg_LED1 <= 1'b0;
@@ -542,6 +548,112 @@ module  altera_max_10(
         // TODO add placeholder states
         endcase
     end
+
+    parameter [55:0] ETH_PREAMBLE = 56'hAA_AA_AA_AA_AA_AA_AA;
+    parameter  [7:0] ETH_SFD      = 8'hAB;
+    parameter [47:0] ETH_DST_MAC_ADDR = 48'h0; // Can this be arbitrary?
+    parameter [47:0] ETH_SRC_MAC_ADDR = 48'h0; // Can this be arbitrary? Though probably shouldn't match?
+    parameter [15:0] ETH_TYPE         = 16'h06_00; // 'd1536, the minimum value. Not specifying payload size?
+
+    // abitrarily making this 64 bytes, must be between range of 46-1500 bytes (when not using 802.1Q Header)
+    parameter [511:0] ETH_PAYLOAD = 512'hDEADBEEF_DEADBEEF_DEADBEEF_DEADBEED__DEADBEEF_DEADBEEF_DEADBEEF_DEADBEEF___DEADBEEF_DEADBEEF_DEADBEEF_DEADBEEF__DEADBEEF_DEADBEEF_DEADBEEF_DEADBEEF;
+    parameter [31:0] ETH_CRC_FCS = 32'h183ED9C3; // computed using crccalc.com, using CRC-32 algorithm
+
+    // FSM to send ETH packets to PHY
+    localparam  TO_PHY_RESET_s        = 4'h0,
+                TO_PHY_ETH_PREAMBLE_s = 4'h1,
+                TO_PHY_ETH_SFD_s      = 4'h2,
+                TO_PHY_DST_MAC_ADDR_s = 4'h3,
+                TO_PHY_SRC_MAC_ADDR_s = 4'h4,
+                TO_PHY_ETH_TYPE_s     = 4'h5,
+                TO_PHY_PAYLOAD_s      = 4'h6,
+                TO_PHY_CRC_s          = 4'h7;
+                // TODO add placeholder states for the rest of the bits
+    reg [3:0]   to_phy_cur_state, to_phy_nxt_state;
+
+    always @ (posedge ENETA_TX_CLK) begin
+        if (CPU_RESETn == 0) begin
+            to_phy_cur_state <= TO_PHY_RESET_s;
+        end else begin
+            to_phy_cur_state <= to_phy_nxt_state;
+        end
+    end
+
+    // reduce size of these later for efficiency
+    reg [31:0] phy_eth_preamble_count;
+    reg [31:0] phy_eth_sfd_count;
+    reg [31:0] phy_dst_mac_addr_count;
+    reg [31:0] phy_src_mac_addr_count;
+    reg [31:0] phy_eth_type_count;
+    reg [31:0] phy_payload_count;
+    reg [31:0] phy_crc_count;
+
+    always @ (*) begin
+        to_phy_nxt_state = to_phy_cur_state; // default value
+        if (CPU_RESETn == 0 || start_loopback_traffic == 0) begin
+            to_phy_nxt_state = RESET_s;
+        end 
+        else begin
+            case (to_phy_cur_state)
+                TO_PHY_RESET_s : begin
+                    if (CPU_RESETn == 1 && start_loopback_traffic == 1) to_phy_nxt_state = TO_PHY_ETH_PREAMBLE_s;
+                end
+                TO_PHY_ETH_PREAMBLE_s: begin
+                    if (phy_eth_preamble_count == 'd56 /*or divide all these by 4?*/) to_phy_nxt_state = TO_PHY_ETH_SFD_s;
+                end
+                TO_PHY_ETH_SFD_s: begin
+                    if (phy_eth_sfd_count == 'd8) to_phy_nxt_state = TO_PHY_DST_MAC_ADDR_s;
+                end
+                TO_PHY_DST_MAC_ADDR_s: begin
+                    if (phy_dst_mac_addr_count == 'd48) to_phy_nxt_state = TO_PHY_SRC_MAC_ADDR_s;
+                end
+                TO_PHY_SRC_MAC_ADDR_s: begin
+                    if (phy_src_mac_addr_count == 'd48) to_phy_nxt_state = TO_PHY_ETH_TYPE_s;
+                end
+                TO_PHY_ETH_TYPE_s: begin
+                    if (phy_eth_type_count == 'd16) to_phy_nxt_state = TO_PHY_PAYLOAD_s;
+                end
+                TO_PHY_PAYLOAD_s: begin
+                    if (phy_payload_count == 'd512) to_phy_nxt_state = TO_PHY_CRC_s;
+                end
+                TO_PHY_CRC_s: begin
+                end
+                // TODO add placeholder states
+            endcase
+        end
+    end
+
+
+    always @ (posedge ENETA_TX_CLK) begin
+        case (to_phy_cur_state)
+        TO_PHY_RESET_s : begin
+            phy_eth_preamble_count <= 0;
+            phy_eth_sfd_count      <= 0;
+            phy_dst_mac_addr_count <= 0;
+            phy_src_mac_addr_count <= 0;
+            phy_eth_type_count     <= 0;
+            phy_payload_count      <= 0;
+            phy_crc_count          <= 0;
+        end
+        TO_PHY_ETH_PREAMBLE_s : begin
+        end
+                TO_PHY_ETH_SFD_s: begin
+        end
+                TO_PHY_DST_MAC_ADDR_s: begin
+        end
+                TO_PHY_SRC_MAC_ADDR_s: begin
+        end
+                TO_PHY_ETH_TYPE_s: begin
+        end
+                TO_PHY_PAYLOAD_s: begin
+        end
+                TO_PHY_CRC_s: begin
+        end
+        endcase
+        // TODO add placeholder states
+    end
+
+
 
     reg [4:0] enet_mdio_bit_count;
     reg [4:0] enet_mdio_read_count;

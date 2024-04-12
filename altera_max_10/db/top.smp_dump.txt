@@ -1,4 +1,45 @@
 
+State Machine - |altera_max_10|phy_payload_count
+Name phy_payload_count.00000000000000000000001000000000 
+phy_payload_count.00000000000000000000000000000000 0 
+phy_payload_count.00000000000000000000001000000000 1 
+
+State Machine - |altera_max_10|phy_eth_type_count
+Name phy_eth_type_count.00000000000000000000000000010000 
+phy_eth_type_count.00000000000000000000000000000000 0 
+phy_eth_type_count.00000000000000000000000000010000 1 
+
+State Machine - |altera_max_10|phy_src_mac_addr_count
+Name phy_src_mac_addr_count.00000000000000000000000000110000 
+phy_src_mac_addr_count.00000000000000000000000000000000 0 
+phy_src_mac_addr_count.00000000000000000000000000110000 1 
+
+State Machine - |altera_max_10|phy_dst_mac_addr_count
+Name phy_dst_mac_addr_count.00000000000000000000000000110000 
+phy_dst_mac_addr_count.00000000000000000000000000000000 0 
+phy_dst_mac_addr_count.00000000000000000000000000110000 1 
+
+State Machine - |altera_max_10|phy_eth_sfd_count
+Name phy_eth_sfd_count.00000000000000000000000000001000 
+phy_eth_sfd_count.00000000000000000000000000000000 0 
+phy_eth_sfd_count.00000000000000000000000000001000 1 
+
+State Machine - |altera_max_10|phy_eth_preamble_count
+Name phy_eth_preamble_count.00000000000000000000000000111000 
+phy_eth_preamble_count.00000000000000000000000000000000 0 
+phy_eth_preamble_count.00000000000000000000000000111000 1 
+
+State Machine - |altera_max_10|to_phy_cur_state
+Name to_phy_cur_state.TO_PHY_CRC_s to_phy_cur_state.TO_PHY_PAYLOAD_s to_phy_cur_state.TO_PHY_ETH_TYPE_s to_phy_cur_state.TO_PHY_SRC_MAC_ADDR_s to_phy_cur_state.TO_PHY_DST_MAC_ADDR_s to_phy_cur_state.TO_PHY_ETH_SFD_s to_phy_cur_state.TO_PHY_ETH_PREAMBLE_s to_phy_cur_state.RESET_s 
+to_phy_cur_state.RESET_s 0 0 0 0 0 0 0 0 
+to_phy_cur_state.TO_PHY_ETH_PREAMBLE_s 0 0 0 0 0 0 1 1 
+to_phy_cur_state.TO_PHY_ETH_SFD_s 0 0 0 0 0 1 0 1 
+to_phy_cur_state.TO_PHY_DST_MAC_ADDR_s 0 0 0 0 1 0 0 1 
+to_phy_cur_state.TO_PHY_SRC_MAC_ADDR_s 0 0 0 1 0 0 0 1 
+to_phy_cur_state.TO_PHY_ETH_TYPE_s 0 0 1 0 0 0 0 1 
+to_phy_cur_state.TO_PHY_PAYLOAD_s 0 1 0 0 0 0 0 1 
+to_phy_cur_state.TO_PHY_CRC_s 1 0 0 0 0 0 0 1 
+
 State Machine - |altera_max_10|current_state
 Name current_state.SEND_WRITE_DATA_s current_state.SEND_WRITE_CMD_s current_state.ENABLE_LOOPBACK_s current_state.WAIT_FOR_RAM_WRITE_s current_state.STORE_READ_DATA_s current_state.READ_s current_state.TURNAROUND_0_s current_state.TURNAROUND_z_s current_state.SEND_READ_CMD_s current_state.PHY_PREAMBLE_s current_state.POST_RST_WAIT_s current_state.RESET_s 
 current_state.RESET_s 0 0 0 0 0 0 0 0 0 0 0 0 
