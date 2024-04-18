@@ -665,3 +665,15 @@ Info: Building /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/sof
 make --no-print-directory -C /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
 [BSP build complete]
 [altera_max_10 build complete]
+18:50:41 **** Incremental Build of configuration Nios II for project altera_max_10 ****
+wsl make all 
+Info: Building /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
+make --no-print-directory -C /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
+[BSP build complete]
+[altera_max_10 build complete]
+19:46:29 **** Incremental Build of configuration Nios II for project altera_max_10 ****
+wsl make all 
+Info: Building /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
+make --no-print-directory -C /mnt/c/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/software/altera_max_10_bsp/
+[BSP build complete]
+[altera_max_10 build complete]

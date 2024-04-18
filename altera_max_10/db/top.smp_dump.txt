@@ -24,11 +24,6 @@ Name phy_eth_sfd_count.00000000000000000000000000001000
 phy_eth_sfd_count.00000000000000000000000000000000 0 
 phy_eth_sfd_count.00000000000000000000000000001000 1 
 
-State Machine - |altera_max_10|phy_eth_preamble_count
-Name phy_eth_preamble_count.00000000000000000000000000111000 
-phy_eth_preamble_count.00000000000000000000000000000000 0 
-phy_eth_preamble_count.00000000000000000000000000111000 1 
-
 State Machine - |altera_max_10|to_phy_cur_state
 Name to_phy_cur_state.TO_PHY_CRC_s to_phy_cur_state.TO_PHY_PAYLOAD_s to_phy_cur_state.TO_PHY_ETH_TYPE_s to_phy_cur_state.TO_PHY_SRC_MAC_ADDR_s to_phy_cur_state.TO_PHY_DST_MAC_ADDR_s to_phy_cur_state.TO_PHY_ETH_SFD_s to_phy_cur_state.TO_PHY_ETH_PREAMBLE_s to_phy_cur_state.RESET_s 
 to_phy_cur_state.RESET_s 0 0 0 0 0 0 0 0 

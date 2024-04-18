@@ -221,7 +221,7 @@ module  altera_max_10(
 
     // When GMII interface is selected, a 125 MHz transmit clock is expected on GTX_CLK
     assign ENETA_GTX_CLK = CLK_LVDS_125_p;
-    assign ENETA_TX_D = 4'hF;
+    //assign ENETA_TX_D = 4'hF;
     // ENETA_TX_EN: The MAC (my custon logic?) must hold TX_EN (TX_CTL) low until the MAC has
     // ensured that TX_EN (TX_CTL) is operating at the same speed as the PHY
     assign    ENETA_TX_EN = 1'b1;     //2.5v
@@ -640,6 +640,11 @@ module  altera_max_10(
             phy_crc_count          <= 0;
         end
         TO_PHY_ETH_PREAMBLE_s : begin
+            //write_enet_mdio <= 1;
+            //serial_wr_cmd_to_phy <= {PHY_WRITE, PHY_ADDR, 5'b0_0000, PHY_WR_TURNAROUND}; // temporarily (?) hardcoded to Register 0
+            //enet_mdio <= serial_wr_cmd_to_phy[15-enet_mdio_wr_cmd_count];
+            //enet_mdio <= ETH_PREAMBLE[phy_eth_preamble_count];
+            phy_eth_preamble_count <= phy_eth_preamble_count + 1;
         end
                 TO_PHY_ETH_SFD_s: begin
         end
