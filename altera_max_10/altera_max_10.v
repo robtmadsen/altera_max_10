@@ -344,7 +344,11 @@ module  altera_max_10(
                     if (CPU_RESETn == 1) next_state = POST_RST_WAIT_s;
                 end
                 POST_RST_WAIT_s : begin
+	                `ifndef COCOTB_SIM // real-world requirements not relevant in cocotb sims
                     if (phy_wait_after_reset_count == 'd125000000) next_state = PHY_PREAMBLE_s;
+                    `else
+                    if (phy_wait_after_reset_count == 'd12) next_state = PHY_PREAMBLE_s;
+                    `endif
                 end
                 PHY_PREAMBLE_s : begin
                     if (phy_preamble_count == 'd32) begin
