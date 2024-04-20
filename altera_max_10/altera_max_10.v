@@ -31,13 +31,13 @@ module  altera_max_10(
     output       ENETA_TX_ER,
     input        ENETA_RX_CLK,
     input [3:0]	 ENETA_RX_D,
-    input        ENETA_RX_DV,
-    input        ENETA_RX_ER,
+    input        ENETA_RX_DV, // RGMII RX valid
+    input        ENETA_RX_ER, // MII RX error
     input        ENETA_RESETn,
-    input        ENETA_RX_CRS,
-    input        ENETA_RX_COL,
+    input        ENETA_RX_CRS, // MII Carrier Sense
+    input        ENETA_RX_COL, // MII Collision
     output       ENETA_LED_LINK100,
-    input        ENETA_INTn,
+    input        ENETA_INTn, // Management bus interrupt
     output       ENET_MDC,
     inout        ENET_MDIO,
     
@@ -117,7 +117,6 @@ module  altera_max_10(
             onchip_memory2_0_s1_address <= 'h400; // for some reason the bottom 'd700 odd addresses aren't being written
             onchip_memory2_0_s1_write <= 0;
             onchip_memory2_0_s1_chipselect <= 0;
-            reg_LED0 <= 1'b0;
             onchip_memory2_0_s1_writedata <= {32'hBEEFBEEF};
             ram_writes_per_phy_addr <= 0;
             phy_regs_written_to_ram <= 0;
@@ -212,7 +211,7 @@ module  altera_max_10(
                 end
             // wrote all the addresses, turn on the LED
             end else begin
-                reg_LED0 <= 1'b1;
+                //reg_LED0 <= 1'b1;
                 onchip_memory2_0_s1_write <= 0;
                 onchip_memory2_0_s1_chipselect <= 0;
             end
@@ -221,10 +220,11 @@ module  altera_max_10(
 
     // When GMII interface is selected, a 125 MHz transmit clock is expected on GTX_CLK
     assign ENETA_GTX_CLK = CLK_LVDS_125_p;
-    //assign ENETA_TX_D = 4'hF;
+    reg [3:0] eneta_tx_d;
+    assign ENETA_TX_D = eneta_tx_d;
     // ENETA_TX_EN: The MAC (my custon logic?) must hold TX_EN (TX_CTL) low until the MAC has
     // ensured that TX_EN (TX_CTL) is operating at the same speed as the PHY
-    assign    ENETA_TX_EN = 1'b1;     //2.5v
+    assign ENETA_TX_EN = 1'b1;     //2.5v
     assign ENETA_TX_ER = 1'b0;
     assign ENETA_LED_LINK100 = 1'b1;
     // MDC is the management data clock reference for the serial management interface.
@@ -345,7 +345,7 @@ module  altera_max_10(
                 end
                 POST_RST_WAIT_s : begin
 	                `ifndef COCOTB_SIM // real-world requirements not relevant in cocotb sims
-                    if (phy_wait_after_reset_count == 'd125000000) next_state = PHY_PREAMBLE_s;
+                    if (phy_wait_after_reset_count == 'd12500000) next_state = PHY_PREAMBLE_s;
                     `else
                     if (phy_wait_after_reset_count == 'd12) next_state = PHY_PREAMBLE_s;
                     `endif
@@ -556,7 +556,7 @@ module  altera_max_10(
     parameter [55:0] ETH_PREAMBLE = 56'hAA_AA_AA_AA_AA_AA_AA;
     parameter  [7:0] ETH_SFD      = 8'hAB;
     parameter [47:0] ETH_DST_MAC_ADDR = 48'h0; // Can this be arbitrary?
-    parameter [47:0] ETH_SRC_MAC_ADDR = 48'h0; // Can this be arbitrary? Though probably shouldn't match?
+    parameter [47:0] ETH_SRC_MAC_ADDR = 48'hAA_AA_AA__AA_AA_AA; // Can this be arbitrary? Though probably shouldn't match?
     parameter [15:0] ETH_TYPE         = 16'h06_00; // 'd1536, the minimum value. Not specifying payload size?
 
     // abitrarily making this 64 bytes, must be between range of 46-1500 bytes (when not using 802.1Q Header)
@@ -571,11 +571,13 @@ module  altera_max_10(
                 TO_PHY_SRC_MAC_ADDR_s = 4'h4,
                 TO_PHY_ETH_TYPE_s     = 4'h5,
                 TO_PHY_PAYLOAD_s      = 4'h6,
-                TO_PHY_CRC_s          = 4'h7;
+                TO_PHY_CRC_s          = 4'h7,
+                TO_PHY_READ_LB_PKT_s  = 4'h8;
                 // TODO add placeholder states for the rest of the bits
     reg [3:0]   to_phy_cur_state, to_phy_nxt_state;
 
-    always @ (posedge ENETA_TX_CLK) begin
+    //always @ (posedge ENETA_TX_CLK) begin
+    always @ (posedge ENETA_RX_CLK) begin // not sure which clock to use, TX not ticking
         if (CPU_RESETn == 0) begin
             to_phy_cur_state <= TO_PHY_RESET_s;
         end else begin
@@ -595,7 +597,7 @@ module  altera_max_10(
     always @ (*) begin
         to_phy_nxt_state = to_phy_cur_state; // default value
         if (CPU_RESETn == 0 || start_loopback_traffic == 0) begin
-            to_phy_nxt_state = RESET_s;
+            to_phy_nxt_state = TO_PHY_RESET_s;
         end 
         else begin
             case (to_phy_cur_state)
@@ -603,24 +605,27 @@ module  altera_max_10(
                     if (CPU_RESETn == 1 && start_loopback_traffic == 1) to_phy_nxt_state = TO_PHY_ETH_PREAMBLE_s;
                 end
                 TO_PHY_ETH_PREAMBLE_s: begin
-                    if (phy_eth_preamble_count == 'd56 /*or divide all these by 4?*/) to_phy_nxt_state = TO_PHY_ETH_SFD_s;
+                    if (phy_eth_preamble_count == 'd55 /*or divide all these by 4?*/) to_phy_nxt_state = TO_PHY_ETH_SFD_s;
                 end
                 TO_PHY_ETH_SFD_s: begin
-                    if (phy_eth_sfd_count == 'd8) to_phy_nxt_state = TO_PHY_DST_MAC_ADDR_s;
+                    if (phy_eth_sfd_count == 'd7) to_phy_nxt_state = TO_PHY_DST_MAC_ADDR_s;
                 end
                 TO_PHY_DST_MAC_ADDR_s: begin
-                    if (phy_dst_mac_addr_count == 'd48) to_phy_nxt_state = TO_PHY_SRC_MAC_ADDR_s;
+                    if (phy_dst_mac_addr_count == 'd47) to_phy_nxt_state = TO_PHY_SRC_MAC_ADDR_s;
                 end
                 TO_PHY_SRC_MAC_ADDR_s: begin
-                    if (phy_src_mac_addr_count == 'd48) to_phy_nxt_state = TO_PHY_ETH_TYPE_s;
+                    if (phy_src_mac_addr_count == 'd47) to_phy_nxt_state = TO_PHY_ETH_TYPE_s;
                 end
                 TO_PHY_ETH_TYPE_s: begin
-                    if (phy_eth_type_count == 'd16) to_phy_nxt_state = TO_PHY_PAYLOAD_s;
+                    if (phy_eth_type_count == 'd15) to_phy_nxt_state = TO_PHY_PAYLOAD_s;
                 end
                 TO_PHY_PAYLOAD_s: begin
-                    if (phy_payload_count == 'd512) to_phy_nxt_state = TO_PHY_CRC_s;
+                    if (phy_payload_count == 'd511) to_phy_nxt_state = TO_PHY_CRC_s;
                 end
                 TO_PHY_CRC_s: begin
+                    if (phy_crc_count == 'd31) to_phy_nxt_state = TO_PHY_READ_LB_PKT_s;
+                end
+                TO_PHY_READ_LB_PKT_s: begin
                 end
                 // TODO add placeholder states
             endcase
@@ -628,7 +633,8 @@ module  altera_max_10(
     end
 
 
-    always @ (posedge ENETA_TX_CLK) begin
+    //always @ (posedge ENETA_TX_CLK) begin
+    always @ (posedge ENETA_RX_CLK) begin
         case (to_phy_cur_state)
         TO_PHY_RESET_s : begin
             phy_eth_preamble_count <= 0;
@@ -638,25 +644,39 @@ module  altera_max_10(
             phy_eth_type_count     <= 0;
             phy_payload_count      <= 0;
             phy_crc_count          <= 0;
+            eneta_tx_d             <= 0;
+            reg_LED0 <= 1'b0; // here temporarily
         end
         TO_PHY_ETH_PREAMBLE_s : begin
-            //write_enet_mdio <= 1;
-            //serial_wr_cmd_to_phy <= {PHY_WRITE, PHY_ADDR, 5'b0_0000, PHY_WR_TURNAROUND}; // temporarily (?) hardcoded to Register 0
-            //enet_mdio <= serial_wr_cmd_to_phy[15-enet_mdio_wr_cmd_count];
-            //enet_mdio <= ETH_PREAMBLE[phy_eth_preamble_count];
+            eneta_tx_d[0] <= ETH_PREAMBLE[55-phy_eth_preamble_count];
             phy_eth_preamble_count <= phy_eth_preamble_count + 1;
         end
-                TO_PHY_ETH_SFD_s: begin
+        TO_PHY_ETH_SFD_s: begin
+            eneta_tx_d[0] <= ETH_SFD[7-phy_eth_sfd_count];
+            phy_eth_sfd_count <= phy_eth_sfd_count + 1;
         end
-                TO_PHY_DST_MAC_ADDR_s: begin
+        TO_PHY_DST_MAC_ADDR_s: begin
+            eneta_tx_d[0] <= ETH_DST_MAC_ADDR[47-phy_dst_mac_addr_count];
+            phy_dst_mac_addr_count <= phy_dst_mac_addr_count + 1;
         end
-                TO_PHY_SRC_MAC_ADDR_s: begin
+        TO_PHY_SRC_MAC_ADDR_s: begin
+            eneta_tx_d[0] <= ETH_SRC_MAC_ADDR[47-phy_src_mac_addr_count];
+            phy_src_mac_addr_count <= phy_src_mac_addr_count + 1;
         end
-                TO_PHY_ETH_TYPE_s: begin
+        TO_PHY_ETH_TYPE_s: begin
+            eneta_tx_d[0] <= ETH_TYPE[15-phy_eth_type_count];
+            phy_eth_type_count <= phy_eth_type_count + 1;
         end
-                TO_PHY_PAYLOAD_s: begin
+        TO_PHY_PAYLOAD_s: begin
+            eneta_tx_d[0] <= ETH_PAYLOAD[511-phy_payload_count];
+            phy_payload_count <= phy_payload_count + 1;
         end
-                TO_PHY_CRC_s: begin
+        TO_PHY_CRC_s: begin
+            eneta_tx_d[0] <= ETH_CRC_FCS[31-phy_crc_count];
+            phy_crc_count <= phy_crc_count + 1;
+        end
+        TO_PHY_READ_LB_PKT_s: begin
+            reg_LED0 <= 1'b1; // here temporarily, so I know we got through this FSM
         end
         endcase
         // TODO add placeholder states

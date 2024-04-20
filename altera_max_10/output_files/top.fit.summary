@@ -1,17 +1,17 @@
-Fitter Status : Successful - Wed Apr 17 19:44:12 2024
+Fitter Status : Successful - Sat Apr 20 12:27:50 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : top
 Top-level Entity Name : altera_max_10
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 5,552 / 49,760 ( 11 % )
-    Total combinational functions : 3,836 / 49,760 ( 8 % )
-    Dedicated logic registers : 3,916 / 49,760 ( 8 % )
-Total registers : 3916
+Total logic elements : 6,160 / 49,760 ( 12 % )
+    Total combinational functions : 4,418 / 49,760 ( 9 % )
+    Dedicated logic registers : 4,211 / 49,760 ( 8 % )
+Total registers : 4211
 Total pins : 57 / 360 ( 16 % )
 Total virtual pins : 0
-Total memory bits : 1,395,712 / 1,677,312 ( 83 % )
+Total memory bits : 1,436,672 / 1,677,312 ( 86 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )
 UFM blocks : 0 / 1 ( 0 % )

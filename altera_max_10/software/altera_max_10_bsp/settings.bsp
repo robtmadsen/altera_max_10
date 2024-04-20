@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 6, 2024 10:37:48 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1712421468410</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Apr 20, 2024 8:11:33 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1713622293984</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\robertmadsen\Desktop\altera_max_10\altera_max_10\software\altera_max_10_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\robertmadsen\Desktop\altera_max_10\altera_max_10\nios_setup.sopcinfo</SopcDesignFile>

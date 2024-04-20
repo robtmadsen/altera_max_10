@@ -28,6 +28,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ENETA_TX_D[0]",
+					"strict" : false
+				},
+				{
 					"name" : "ENET_MDC",
 					"strict" : false
 				},

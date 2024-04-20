@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2e' in SOPC Builder design 'nios_setup'
  * SOPC Builder design path: C:/Users/robertmadsen/Desktop/altera_max_10/altera_max_10/nios_setup.sopcinfo
  *
- * Generated: Sat Apr 06 10:37:48 MDT 2024
+ * Generated: Sat Apr 20 08:11:37 MDT 2024
  */
 
 /*

@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Wed Apr 17 19:43:32 2024
+Analysis & Synthesis Status : Successful - Sat Apr 20 12:27:26 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : top
 Top-level Entity Name : altera_max_10
 Family : MAX 10
-Total logic elements : 5,692
-    Total combinational functions : 3,829
-    Dedicated logic registers : 3,924
-Total registers : 3924
+Total logic elements : 6,324
+    Total combinational functions : 4,411
+    Dedicated logic registers : 4,219
+Total registers : 4219
 Total pins : 56
 Total virtual pins : 0
-Total memory bits : 1,395,712
+Total memory bits : 1,436,672
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
 UFM blocks : 0
